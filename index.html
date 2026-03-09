@@ -18,7 +18,7 @@
 <meta name="twitter:title" content="FlowOS — The Adaptive Marketing OS">
 <meta name="twitter:description" content="Replace 30 disconnected tools with one intelligent platform. Funnels end. Flows don't.">
 <link rel="canonical" href="https://getflowos.com">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="https://storage.googleapis.com/vulive-v2.firebasestorage.app/businesses/dRRyYIfFUpGK2vEJ9yAw/assets/28289ec6-49a0-4c7c-b4f4-dc7bf790e50b.png">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -114,15 +114,10 @@ nav {
   font-size: 1.125rem;
   letter-spacing: -0.02em;
 }
-.nav-logo-icon {
-  width: 32px; height: 32px;
-  background: var(--accent);
-  border-radius: 9px;
-  display: flex; align-items: center; justify-content: center;
-  color: #fff;
-  font-weight: 700;
-  font-size: 0.75rem;
-  letter-spacing: 0.05em;
+.nav-logo-image {
+  height: 34px;
+  width: auto;
+  max-width: 170px;
 }
 .nav-links {
   display: flex;
@@ -195,7 +190,7 @@ nav {
 
 /* ===== HERO ===== */
 .hero {
-  padding: 130px 0 100px;
+  padding: 80px 0 100px;
   text-align: center;
   position: relative;
 }
@@ -217,6 +212,62 @@ nav {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
   pointer-events: none;
 }
+.hero-top {
+  position: relative;
+  overflow: hidden;
+  padding: 14px 0 28px;
+  border-radius: 32px;
+  isolation: isolate;
+}
+.hero-top-copy {
+  position: relative;
+  z-index: 1;
+}
+.hero-top-particles {
+  position: absolute;
+  inset: -8% 0 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero-top-particles span {
+  position: absolute;
+  left: var(--from-x);
+  top: var(--from-y);
+  width: var(--dot-size, 8px);
+  height: var(--dot-size, 8px);
+  border-radius: 50%;
+  background: var(--dot-color, rgba(77,118,255,0.62));
+  opacity: 0;
+  animation: heroDotInward var(--duration, 9s) linear infinite;
+  animation-delay: var(--delay, 0s);
+}
+.hero-top-particles span::after {
+  content: none;
+}
+.hero-top-particles .dot-1 { --from-x: 6%; --from-y: 20%; --dot-size: 8px; --duration: 8.4s; --delay: -1.4s; --dot-color: rgba(65,109,255,0.64); }
+.hero-top-particles .dot-2 { --from-x: 13%; --from-y: 76%; --dot-size: 10px; --duration: 10.6s; --delay: -3.2s; --dot-color: rgba(88,126,255,0.58); }
+.hero-top-particles .dot-3 { --from-x: 22%; --from-y: 8%; --dot-size: 7px; --duration: 9.8s; --delay: -5.4s; --dot-color: rgba(54,98,242,0.6); }
+.hero-top-particles .dot-4 { --from-x: 31%; --from-y: 88%; --dot-size: 9px; --duration: 11.2s; --delay: -2.1s; --dot-color: rgba(74,118,255,0.62); }
+.hero-top-particles .dot-5 { --from-x: 78%; --from-y: 10%; --dot-size: 8px; --duration: 9.1s; --delay: -4.8s; --dot-color: rgba(65,109,255,0.64); }
+.hero-top-particles .dot-6 { --from-x: 86%; --from-y: 26%; --dot-size: 11px; --duration: 10.4s; --delay: -6.2s; --dot-color: rgba(88,126,255,0.58); }
+.hero-top-particles .dot-7 { --from-x: 92%; --from-y: 74%; --dot-size: 7px; --duration: 8.8s; --delay: -1.6s; --dot-color: rgba(54,98,242,0.6); }
+.hero-top-particles .dot-8 { --from-x: 73%; --from-y: 90%; --dot-size: 10px; --duration: 11.5s; --delay: -7.1s; --dot-color: rgba(74,118,255,0.62); }
+.hero-top-particles .dot-9 { --from-x: 3%; --from-y: 52%; --dot-size: 6px; --duration: 9.5s; --delay: -3.7s; --dot-color: rgba(61,103,246,0.56); }
+.hero-top-particles .dot-10 { --from-x: 97%; --from-y: 48%; --dot-size: 6px; --duration: 9.3s; --delay: -6.7s; --dot-color: rgba(82,122,255,0.54); }
+.hero-top-particles .dot-11 { --from-x: 44%; --from-y: 2%; --dot-size: 8px; --duration: 10.1s; --delay: -2.8s; --dot-color: rgba(54,98,242,0.6); }
+.hero-top-particles .dot-12 { --from-x: 58%; --from-y: 98%; --dot-size: 8px; --duration: 10.9s; --delay: -5.9s; --dot-color: rgba(88,126,255,0.58); }
+.hero-top-particles .dot-13 { --from-x: 9%; --from-y: 34%; --dot-size: 7px; --duration: 9.7s; --delay: -4.1s; --dot-color: rgba(74,118,255,0.62); }
+.hero-top-particles .dot-14 { --from-x: 18%; --from-y: 62%; --dot-size: 9px; --duration: 11.1s; --delay: -7.4s; --dot-color: rgba(61,103,246,0.56); }
+.hero-top-particles .dot-15 { --from-x: 27%; --from-y: 18%; --dot-size: 6px; --duration: 8.9s; --delay: -2.9s; --dot-color: rgba(82,122,255,0.54); }
+.hero-top-particles .dot-16 { --from-x: 36%; --from-y: 80%; --dot-size: 8px; --duration: 10.7s; --delay: -5.1s; --dot-color: rgba(65,109,255,0.64); }
+.hero-top-particles .dot-17 { --from-x: 64%; --from-y: 12%; --dot-size: 7px; --duration: 9.6s; --delay: -6.5s; --dot-color: rgba(74,118,255,0.62); }
+.hero-top-particles .dot-18 { --from-x: 82%; --from-y: 38%; --dot-size: 9px; --duration: 10.8s; --delay: -3.5s; --dot-color: rgba(88,126,255,0.58); }
+.hero-top-particles .dot-19 { --from-x: 89%; --from-y: 60%; --dot-size: 7px; --duration: 9.2s; --delay: -7.8s; --dot-color: rgba(54,98,242,0.6); }
+.hero-top-particles .dot-20 { --from-x: 69%; --from-y: 84%; --dot-size: 9px; --duration: 11.4s; --delay: -4.6s; --dot-color: rgba(61,103,246,0.56); }
+.hero-top-particles .dot-21 { --from-x: 50%; --from-y: 6%; --dot-size: 6px; --duration: 8.7s; --delay: -1.9s; --dot-color: rgba(82,122,255,0.54); }
+.hero-top-particles .dot-22 { --from-x: 52%; --from-y: 94%; --dot-size: 6px; --duration: 10.3s; --delay: -6.1s; --dot-color: rgba(65,109,255,0.64); }
+.hero-top-particles .dot-23 { --from-x: 4%; --from-y: 66%; --dot-size: 8px; --duration: 9.9s; --delay: -3.1s; --dot-color: rgba(74,118,255,0.62); }
+.hero-top-particles .dot-24 { --from-x: 95%; --from-y: 30%; --dot-size: 8px; --duration: 10.5s; --delay: -5.7s; --dot-color: rgba(88,126,255,0.58); }
 .hero-badge {
   display: inline-flex;
   align-items: center;
@@ -233,13 +284,13 @@ nav {
 }
 .hero-badge-dot {
   width: 8px; height: 8px;
-  background: var(--green);
+  background: var(--accent);
   border-radius: 50%;
   animation: pulse-dot 2s infinite;
 }
 @keyframes pulse-dot {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(34,197,94,0.4); }
-  50% { box-shadow: 0 0 0 6px rgba(34,197,94,0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(45,91,255,0.34); }
+  50% { box-shadow: 0 0 0 6px rgba(45,91,255,0); }
 }
 .hero h1 {
   font-family: var(--font-display);
@@ -281,20 +332,70 @@ nav {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+@keyframes heroDotInward {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.85);
+  }
+  10% {
+    opacity: 0.58;
+  }
+  78% {
+    opacity: 0.24;
+  }
+  100% {
+    left: 50%;
+    top: 44%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.3);
+  }
+}
 
 /* ===== HERO VISUAL ===== */
 .hero-visual {
   margin-top: 64px;
   animation: fadeUp 0.8s 0.4s ease both;
+  perspective: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  scroll-margin-top: 92px;
+}
+.hero-widget-stage {
+  min-width: 0;
 }
 .hero-dashboard {
-  max-width: 1060px;
+  width: 100%;
+  max-width: 1320px;
   margin: 0 auto;
   background: var(--bg-card);
   border-radius: var(--radius-lg);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-xl), 0 0 0 1px rgba(0,0,0,0.02);
   overflow: hidden;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateY(0deg);
+  transition: transform 260ms ease, box-shadow 260ms ease;
+  --glow-x: 50%;
+  --glow-y: 12%;
+  --glow-opacity: 0;
+  --widget-body-height: 504px;
+}
+.hero-dashboard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(260px circle at var(--glow-x) var(--glow-y), rgba(45,91,255,0.05), transparent 62%);
+  opacity: var(--glow-opacity);
+  pointer-events: none;
+  transition: opacity 180ms ease;
+  z-index: 0;
+}
+.hero-dashboard::after {
+  content: none;
+}
+.hero-dashboard.is-interactive:hover {
+  box-shadow: 0 22px 50px rgba(26,26,24,0.11), 0 8px 18px rgba(45,91,255,0.05);
 }
 .dash-toolbar {
   display: flex;
@@ -302,6 +403,8 @@ nav {
   gap: 8px;
   padding: 14px 20px;
   border-bottom: 1px solid var(--border-light);
+  position: relative;
+  z-index: 1;
 }
 .dash-dot { width: 10px; height: 10px; border-radius: 50%; }
 .dash-dot.r { background: #FCA5A5; }
@@ -317,39 +420,174 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4px;
+  gap: 8px;
 }
-.dash-cursor {
-  width: 2px;
-  height: 12px;
-  background: var(--accent);
-  border-radius: 1px;
-  animation: blink 1s step-end infinite;
+.dash-toolbar-logo {
+  height: 18px;
+  width: auto;
+  flex-shrink: 0;
 }
-@keyframes blink {
-  50% { opacity: 0; }
+.dash-toolbar-title-text {
+  white-space: nowrap;
 }
-.dash-body { padding: 24px; display: grid; grid-template-columns: 220px 1fr; gap: 20px; min-height: 420px; }
+.dash-body {
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr) 232px;
+  gap: 20px;
+  min-height: var(--widget-body-height);
+  height: var(--widget-body-height);
+}
 
-.dash-sidebar { display: flex; flex-direction: column; gap: 4px; }
+.dash-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+  z-index: 1;
+  transform: translateZ(14px);
+  min-height: 0;
+}
 .dash-nav-item {
   display: flex; align-items: center; gap: 10px;
+  width: 100%;
   padding: 10px 14px; border-radius: var(--radius-sm);
   font-size: 0.8125rem; font-weight: 500;
   color: var(--text-secondary);
+  text-align: left;
+  border: none;
+  background: transparent;
   transition: all var(--transition);
+}
+.dash-nav-item:hover { background: rgba(45,91,255,0.06); color: var(--text-primary); }
+.dash-nav-item:focus-visible {
+  outline: 2px solid rgba(45,91,255,0.24);
+  outline-offset: 2px;
 }
 .dash-nav-item.active { background: var(--accent-light); color: var(--accent); font-weight: 600; }
 .dash-nav-icon { width: 18px; height: 18px; opacity: 0.5; }
 .dash-nav-item.active .dash-nav-icon { opacity: 1; }
+.dash-sidebar-cta {
+  margin-top: 10px;
+  width: 100%;
+  justify-content: center;
+  padding: 10px 14px;
+  font-size: 0.75rem;
+  text-decoration: none;
+}
 
-.dash-content { display: flex; flex-direction: column; gap: 16px; }
-.dash-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.dash-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+}
+.dash-explainer {
+  position: relative;
+  min-width: 0;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  padding-top: 0;
+}
+.dash-explainer-card {
+  min-height: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 14px 18px;
+  border-radius: 18px;
+  background: rgba(232, 237, 255, 0.45);
+  border: 1px dashed var(--accent);
+  overflow: hidden;
+  text-align: center;
+}
+.dash-explainer-kicker {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.dash-explainer-title {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  max-width: 16ch;
+}
+.dash-explainer-copy,
+.dash-explainer-detail {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  max-width: 22ch;
+}
+.dash-explainer-label {
+  margin-top: 4px;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+.dash-explainer-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+.dash-explainer-list li {
+  display: block;
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: rgba(232, 237, 255, 0.82);
+  border: 1px solid rgba(45,91,255,0.16);
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+.dash-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  transform: translateZ(22px);
+}
 .stat-card {
   padding: 18px;
   background: var(--bg);
   border-radius: var(--radius-sm);
   border: 1px solid var(--border-light);
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+.stat-card::after {
+  content: '';
+  position: absolute;
+  inset: auto -20% -65% 40%;
+  height: 90px;
+  background: radial-gradient(circle, rgba(45,91,255,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(45,91,255,0.18);
 }
 .stat-label { font-size: 0.6875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary); margin-bottom: 6px; }
 .stat-value { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; }
@@ -364,18 +602,42 @@ nav {
   border: 1px solid var(--border-light);
   padding: 20px;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   min-height: 200px;
+  transform: translateZ(32px);
+}
+.dash-default-view,
+.dash-flows-view,
+.dash-profiles-view,
+.dash-analytics-view,
+.dash-integrations-view {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+  min-height: 0;
+}
+.dash-default-view[hidden],
+.dash-flows-view[hidden],
+.dash-profiles-view[hidden],
+.dash-analytics-view[hidden],
+.dash-integrations-view[hidden] {
+  display: none !important;
 }
 .chart-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
 .chart-title { font-size: 0.8125rem; font-weight: 600; }
 .chart-tabs { display: flex; gap: 4px; }
 .chart-tab {
+  appearance: none;
+  border: none;
+  background: transparent;
   font-size: 0.6875rem;
   padding: 4px 10px;
   border-radius: 6px;
   font-weight: 500;
   color: var(--text-tertiary);
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
 }
 .chart-tab.active { background: var(--text-primary); color: #fff; }
 .chart-area {
@@ -383,20 +645,905 @@ nav {
   height: 140px;
   display: flex;
   align-items: flex-end;
-  gap: 6px;
+  gap: var(--chart-gap, 6px);
+  z-index: 1;
+}
+.chart-area::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(45,91,255,0.06), transparent 65%),
+    repeating-linear-gradient(to right, transparent 0 42px, rgba(45,91,255,0.05) 42px 43px);
+  pointer-events: none;
+}
+.chart-area::after {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 -18%;
+  width: 28%;
+  background: linear-gradient(90deg, transparent, rgba(45,91,255,0.14), transparent);
+  filter: blur(8px);
+  opacity: 0.45;
+  animation: chartSweep 4.6s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes chartSweep {
+  0%, 100% { transform: translateX(0); opacity: 0; }
+  20% { opacity: 0.65; }
+  55% { opacity: 0.4; }
+  100% { transform: translateX(430%); opacity: 0; }
 }
 .chart-bar {
   flex: 1;
-  background: var(--accent);
+  background: rgba(45,91,255,0.22);
   border-radius: 4px 4px 0 0;
-  opacity: 0.15;
-  transition: opacity var(--transition);
+  border: none;
+  opacity: 1;
+  transition: background-color var(--transition), opacity var(--transition);
   min-height: 8px;
+  position: relative;
+  transform-origin: bottom;
+  animation: chartBarPulse 5.4s ease-in-out infinite;
+  animation-delay: calc(var(--bar-index, 0) * 120ms);
+  cursor: pointer;
 }
-.chart-bar:nth-child(4n) { opacity: 0.3; }
-.chart-bar:nth-child(3n) { opacity: 0.5; }
-.chart-bar:nth-child(5n+2) { opacity: 0.7; }
-.chart-bar:last-child { opacity: 1; }
+.chart-bar:hover,
+.chart-bar:focus-visible {
+  background: var(--accent);
+  outline: none;
+}
+@keyframes chartBarPulse {
+  0%, 100% { transform: scaleY(1); filter: saturate(1); }
+  50% { transform: scaleY(1.02); filter: saturate(1.08); }
+}
+.chart-tooltip {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: rgba(26,26,24,0.92);
+  color: #fff;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  line-height: 1.35;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -110%);
+  transition: opacity 140ms ease;
+  z-index: 30;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+}
+.chart-tooltip.is-visible { opacity: 1; }
+.flowboard-shell {
+  flex: 1;
+  background: var(--bg);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  min-height: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transform: translateZ(24px);
+}
+.widget-view-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  text-align: left;
+}
+.widget-view-copy {
+  min-width: 0;
+  text-align: left;
+}
+.widget-view-kicker {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-tertiary);
+  margin-bottom: 4px;
+}
+.widget-view-title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 2px;
+}
+.widget-view-subtitle {
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: var(--text-secondary);
+  max-width: 420px;
+  text-align: left;
+}
+.flowboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.flowboard-eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-tertiary);
+  margin-bottom: 4px;
+}
+.flowboard-title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.flowboard-canvas {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-gutter: stable both-edges;
+  border-radius: 14px;
+  background-color: #fff;
+  background-image:
+    linear-gradient(rgba(45,91,255,0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(45,91,255,0.045) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-position: 0 0;
+  border: 1px solid rgba(45,91,255,0.08);
+  padding: 14px;
+  cursor: grab;
+  touch-action: pan-x pan-y;
+  overscroll-behavior: contain;
+}
+.flowboard-canvas:active,
+.flowboard-canvas.is-dragging { cursor: grabbing; }
+.flowboard-canvas.is-dragging {
+  user-select: none;
+}
+.flowboard-canvas::before {
+  content: none;
+}
+.flowboard-hint {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.92);
+  border: 1px dashed rgba(45,91,255,0.28);
+  box-shadow: 0 6px 16px rgba(26,26,24,0.06);
+  color: var(--accent);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  pointer-events: none;
+  z-index: 2;
+  white-space: nowrap;
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+.flowboard-hint-icon {
+  width: auto;
+  height: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  flex-shrink: 0;
+  font-size: 0.9375rem;
+  line-height: 1;
+}
+.flowboard-hint.is-hidden {
+  opacity: 0;
+  transform: translateY(8px);
+}
+.flowboard-lane {
+  position: relative;
+  z-index: 1;
+  width: max-content;
+  min-width: 1088px;
+  min-height: 220px;
+  display: grid;
+  grid-template-columns: 176px 56px 176px 56px 176px 56px 176px;
+  grid-template-rows: auto 34px auto;
+  align-items: center;
+  column-gap: 12px;
+  row-gap: 0;
+  padding: 16px 18px 16px 10px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background: transparent;
+}
+.flow-node {
+  width: 176px;
+  min-height: 84px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.92);
+  border: 1px solid rgba(45,91,255,0.12);
+  box-shadow: 0 12px 24px rgba(26,26,24,0.05), 0 2px 4px rgba(26,26,24,0.04);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+.flow-node:hover,
+.flow-node:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 28px rgba(26,26,24,0.07), 0 4px 10px rgba(26,26,24,0.05);
+}
+.flow-node:focus-visible {
+  outline: 2px solid rgba(45,91,255,0.24);
+  outline-offset: 2px;
+}
+.flow-node.page {
+  background: rgba(232,237,255,0.7);
+  border-color: rgba(45,91,255,0.18);
+}
+.flow-node.page .flow-node-stage {
+  background: rgba(45,91,255,0.12);
+  color: var(--accent);
+}
+.flow-node.quiz {
+  background: rgba(255,243,224,0.82);
+  border-color: rgba(245,158,11,0.24);
+}
+.flow-node.quiz .flow-node-stage {
+  background: rgba(245,158,11,0.14);
+  color: #B45309;
+}
+.flow-node.email {
+  background: rgba(236,253,245,0.88);
+  border-color: rgba(34,197,94,0.2);
+}
+.flow-node.email .flow-node-stage {
+  background: rgba(34,197,94,0.12);
+  color: #15803D;
+}
+.flow-node-stage {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 7px;
+  border-radius: 999px;
+  background: rgba(45,91,255,0.08);
+  color: var(--accent);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.flow-node-title {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  margin-bottom: 0;
+}
+.flow-node-desc {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  line-height: 1.35;
+  margin-top: 7px;
+  margin-bottom: 8px;
+  display: block;
+  overflow: visible;
+}
+.flow-node-meta {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--text-tertiary);
+}
+.flow-node-entry { grid-column: 1; grid-row: 1; }
+.flow-node-quiz { grid-column: 3; grid-row: 1; }
+.flow-node-scheduler { grid-column: 5; grid-row: 1; }
+.flow-node-confirm-page { grid-column: 7; grid-row: 1; }
+.flow-node-nurture { grid-column: 3; grid-row: 3; }
+.flow-node-confirm-email { grid-column: 7; grid-row: 3; }
+.flow-link {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: rgba(45,91,255,0.16);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.flow-link-1 { grid-column: 2; grid-row: 1; }
+.flow-link-2 { grid-column: 4; grid-row: 1; }
+.flow-link-3 { grid-column: 6; grid-row: 1; }
+.flow-link::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(45,91,255,0.85) 1.2px, transparent 1.4px);
+  background-size: 16px 2px;
+  background-repeat: repeat-x;
+  animation: flowDotsX 1.2s linear infinite;
+}
+.flow-link::after {
+  content: '';
+  position: absolute;
+  right: -1px;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid rgba(45,91,255,0.55);
+  border-right: 2px solid rgba(45,91,255,0.55);
+  transform: translateY(-50%) rotate(45deg);
+  border-radius: 1px;
+}
+.flow-branch-drop {
+  grid-column: 3;
+  grid-row: 2;
+  justify-self: center;
+  position: relative;
+  width: 2px;
+  height: 100%;
+  background: rgba(34,197,94,0.16);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.flow-branch-drop-confirm {
+  grid-column: 7;
+  grid-row: 2;
+}
+.flow-branch-drop::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(34,197,94,0.88) 1.2px, transparent 1.4px);
+  background-size: 2px 16px;
+  background-repeat: repeat-y;
+  animation: flowDotsY 1.25s linear infinite;
+}
+.flow-branch-drop::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid rgba(34,197,94,0.55);
+  border-bottom: 2px solid rgba(34,197,94,0.55);
+  transform: translateX(-50%) rotate(45deg);
+  border-radius: 1px;
+}
+.flow-travel-dot {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(45,91,255,0.12);
+  transform: translateY(-50%);
+  animation: flowTravel 3.4s linear infinite;
+}
+.flow-travel-dot.delay {
+  animation-delay: 1.5s;
+  opacity: 0.7;
+}
+.flow-travel-dot.vertical {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  animation: flowTravelVertical 3.1s linear infinite;
+}
+.flow-travel-dot.vertical.delay {
+  animation-delay: 1.3s;
+}
+@keyframes flowDotsX {
+  from { background-position: 0 0; }
+  to { background-position: 16px 0; }
+}
+@keyframes flowDotsY {
+  from { background-position: 0 0; }
+  to { background-position: 0 16px; }
+}
+@keyframes flowTravel {
+  0% { transform: translate(0, -50%); opacity: 0; }
+  12% { opacity: 1; }
+  88% { opacity: 1; }
+  100% { transform: translate(calc(100% - 8px), -50%); opacity: 0; }
+}
+@keyframes flowTravelVertical {
+  0% { transform: translate(-50%, 0); opacity: 0; }
+  12% { opacity: 1; }
+  88% { opacity: 1; }
+  100% { transform: translate(-50%, calc(100% - 8px)); opacity: 0; }
+}
+.profiles-shell {
+  flex: 1;
+  min-height: 0;
+  height: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transform: translateZ(24px);
+}
+.profiles-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+.profiles-eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-tertiary);
+  margin-bottom: 4px;
+}
+.profiles-title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 2px;
+}
+.profiles-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+.profiles-period {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: rgba(45,91,255,0.08);
+  border-radius: 999px;
+  padding: 8px 12px;
+  white-space: nowrap;
+}
+.profiles-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.profiles-metric {
+  background: rgba(255,255,255,0.92);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 12px;
+}
+.profiles-metric-label {
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-tertiary);
+  margin-bottom: 6px;
+}
+.profiles-metric-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.profiles-metric.hot .profiles-metric-value { color: #EF4444; }
+.profiles-metric.warm .profiles-metric-value { color: #D97706; }
+.profiles-metric.cold .profiles-metric-value { color: var(--accent); }
+.profiles-panel {
+  flex: 1;
+  min-height: 0;
+  background: rgba(255,255,255,0.7);
+  border: 1px solid var(--border-light);
+  border-radius: 14px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.profiles-segments,
+.profiles-filters {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.profiles-chip,
+.profiles-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: rgba(26,26,24,0.04);
+}
+.profiles-chip.active {
+  background: var(--accent);
+  color: #fff;
+}
+.profiles-search {
+  flex: 1;
+  min-width: 180px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #fff;
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+.profiles-table {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid var(--border-light);
+}
+.profiles-table-head,
+.profiles-row {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr 0.95fr 1.15fr 0.8fr 0.95fr;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 12px;
+}
+.profiles-table-head {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1;
+  border-bottom: 1px solid var(--border-light);
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-tertiary);
+}
+.profiles-row {
+  border-bottom: 1px solid var(--border-light);
+  font-size: 0.75rem;
+}
+.profiles-row:last-child { border-bottom: none; }
+.profiles-contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+.profiles-contact-text {
+  min-width: 0;
+}
+.profiles-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+.profiles-avatar.blue { background: #4F46E5; }
+.profiles-avatar.green { background: #10B981; }
+.profiles-avatar.orange { background: #F59E0B; }
+.profiles-avatar.pink { background: #EC4899; }
+.profiles-name {
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+.profiles-email {
+  display: block;
+  max-width: 100%;
+  font-size: 0.6875rem;
+  line-height: 1.35;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.profiles-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+}
+.profiles-status.hot {
+  background: rgba(239,68,68,0.12);
+  color: #B91C1C;
+}
+.profiles-status.warm {
+  background: rgba(245,158,11,0.14);
+  color: #B45309;
+}
+.profiles-status.active,
+.profiles-status.cold {
+  background: rgba(45,91,255,0.08);
+  color: var(--accent);
+}
+.profiles-source {
+  display: inline-flex;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(45,91,255,0.08);
+  color: var(--accent);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  width: fit-content;
+}
+.profiles-action {
+  color: var(--accent);
+  font-weight: 700;
+}
+.analytics-shell {
+  flex: 1;
+  min-height: 0;
+  height: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transform: translateZ(24px);
+}
+.analytics-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+.analytics-eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-tertiary);
+  margin-bottom: 4px;
+}
+.analytics-title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 2px;
+}
+.analytics-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+.analytics-panel {
+  flex: 1;
+  min-height: 0;
+  background: rgba(255,255,255,0.7);
+  border: 1px solid var(--border-light);
+  border-radius: 14px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.analytics-tabs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 10px;
+}
+.analytics-tab {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 10px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.analytics-tab.active {
+  color: var(--accent);
+  background: rgba(45,91,255,0.08);
+  box-shadow: inset 0 0 0 1px rgba(45,91,255,0.18);
+}
+.analytics-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  overflow: auto;
+}
+.analytics-card {
+  min-height: 132px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.98), rgba(246,249,255,0.94)),
+    #fff;
+  border: 1px solid rgba(45,91,255,0.08);
+  border-radius: 16px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 10px 24px rgba(26,26,24,0.05), inset 0 1px 0 rgba(255,255,255,0.8);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+.analytics-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 28px rgba(26,26,24,0.08), inset 0 1px 0 rgba(255,255,255,0.88);
+  border-color: rgba(45,91,255,0.14);
+}
+.analytics-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.analytics-card-label {
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-tertiary);
+}
+.analytics-card-change {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+}
+.analytics-card-change.up {
+  color: #15803D;
+  background: rgba(16,185,129,0.12);
+}
+.analytics-card-change.down {
+  color: #B91C1C;
+  background: rgba(239,68,68,0.12);
+}
+.analytics-card-value {
+  font-size: 1.375rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+.analytics-spark {
+  position: relative;
+  height: 40px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(45,91,255,0.07), rgba(45,91,255,0.01));
+  border: 1px solid rgba(45,91,255,0.06);
+}
+.analytics-spark::after {
+  content: '';
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  top: 50%;
+  height: 18px;
+  border-radius: 999px;
+  transform: translateY(-50%);
+  opacity: 0.95;
+}
+.analytics-spark.up::after {
+  background: linear-gradient(180deg, rgba(16,185,129,0.18), rgba(16,185,129,0.72));
+  clip-path: polygon(0 82%, 14% 74%, 30% 68%, 48% 57%, 64% 49%, 82% 34%, 100% 18%, 100% 100%, 0 100%);
+}
+.analytics-spark.down::after {
+  background: linear-gradient(180deg, rgba(239,68,68,0.18), rgba(239,68,68,0.72));
+  clip-path: polygon(0 18%, 18% 32%, 38% 45%, 58% 58%, 80% 71%, 100% 82%, 100% 100%, 0 100%);
+}
+.analytics-card-foot {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-top: auto;
+}
+.integrations-shell {
+  flex: 1;
+  min-height: 0;
+  height: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transform: translateZ(24px);
+}
+.integrations-list {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  background: rgba(255,255,255,0.7);
+  border: 1px solid var(--border-light);
+  border-radius: 14px;
+}
+.integration-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border-light);
+}
+.integration-row:last-child { border-bottom: none; }
+.integration-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--border-light);
+}
+.integration-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: inherit;
+}
+.integration-copy {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+.integration-topline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 3px;
+}
+.integration-name {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.integration-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.integration-badge.off {
+  color: var(--text-tertiary);
+  background: rgba(26,26,24,0.05);
+}
+.integration-badge.on {
+  color: #15803D;
+  background: rgba(34,197,94,0.12);
+}
+.integration-badge.join {
+  color: var(--accent);
+  background: rgba(45,91,255,0.1);
+}
+.integration-desc {
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: var(--text-secondary);
+}
 
 /* ===== PROBLEM SECTION ===== */
 .problem {
@@ -433,33 +1580,76 @@ nav {
 .problem-stats {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
 }
 .problem-stat-card {
-  padding: 24px;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
+  position: relative;
+  padding: 18px 24px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.98), rgba(243,247,255,0.94)),
+    var(--bg-card);
+  border: 1px solid rgba(45,91,255,0.12);
+  border-radius: 22px;
   display: flex;
   align-items: center;
   gap: 20px;
-  transition: all var(--transition);
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(26,26,24,0.07), inset 0 1px 0 rgba(255,255,255,0.85);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
-.problem-stat-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.problem-stat-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: linear-gradient(180deg, rgba(45,91,255,0.95), rgba(96,136,255,0.55));
+}
+.problem-stat-card::after {
+  content: none;
+}
+.problem-stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(26,26,24,0.1), inset 0 1px 0 rgba(255,255,255,0.9);
+  border-color: rgba(45,91,255,0.2);
+}
+.problem-stat-card.secondary::before {
+  background: linear-gradient(180deg, rgba(64,113,255,0.92), rgba(118,152,255,0.54));
+}
+.problem-stat-card.tertiary::before {
+  background: linear-gradient(180deg, rgba(36,83,232,0.92), rgba(86,125,246,0.54));
+}
 .problem-stat-num {
-  font-size: 2.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.35rem;
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1;
-  min-width: 80px;
+  min-width: 88px;
+  min-height: 88px;
+  border-radius: 22px;
+  color: var(--accent);
+  background: transparent;
+  box-shadow: none;
+  flex-shrink: 0;
 }
-.problem-stat-num.red { color: var(--red); }
-.problem-stat-num.orange { color: var(--orange); }
-.problem-stat-num.grey { color: var(--text-tertiary); }
+.problem-stat-num.red,
+.problem-stat-num.orange,
+.problem-stat-num.grey { color: var(--accent); }
+.problem-stat-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  flex: 1;
+}
 .problem-stat-text {
   font-size: 0.9375rem;
   color: var(--text-secondary);
   line-height: 1.5;
+  margin: 0;
 }
 .problem-stat-text strong { color: var(--text-primary); }
 
@@ -490,6 +1680,9 @@ nav {
   margin-bottom: 16px;
 }
 .section-header h2 em { font-style: italic; }
+.comparison .section-header h2 em {
+  color: var(--accent);
+}
 .section-header p {
   font-size: 1.0625rem;
   color: var(--text-secondary);
@@ -502,27 +1695,59 @@ nav {
   gap: 24px;
   max-width: 960px;
   margin: 0 auto;
+  align-items: start;
 }
 .compare-card {
   padding: 40px;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border);
+  transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 320ms cubic-bezier(0.22, 1, 0.36, 1), border-color 320ms ease;
 }
 .compare-card.old {
   background: #fff;
   opacity: 0.8;
+  padding: 32px;
 }
 .compare-card.new {
-  background: var(--text-primary);
+  position: relative;
+  background:
+    radial-gradient(circle at top right, rgba(120,153,255,0.28), transparent 34%),
+    radial-gradient(circle at bottom left, rgba(45,91,255,0.18), transparent 30%),
+    linear-gradient(160deg, #17308A 0%, #2346C5 48%, #4C74FF 100%);
   color: #fff;
-  border-color: var(--text-primary);
-  box-shadow: var(--shadow-xl);
-  transform: scale(1.02);
+  border-color: rgba(45,91,255,0.18);
+  box-shadow: 0 26px 48px rgba(23,48,138,0.22), inset 0 1px 0 rgba(255,255,255,0.18);
+  transform: translateY(-2px) scale(1.018);
+  overflow: hidden;
+  will-change: transform;
 }
-.compare-card.new:hover { transform: scale(1.02) translateY(-4px); }
+.compare-card.new::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.08), transparent 34%, transparent 66%, rgba(255,255,255,0.06));
+  pointer-events: none;
+}
+.compare-card.new::after {
+  content: '';
+  position: absolute;
+  right: -48px;
+  top: -48px;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2), transparent 70%);
+  pointer-events: none;
+}
+.compare-card.new:hover {
+  transform: translateY(-6px) scale(1.022);
+  box-shadow: 0 30px 56px rgba(23,48,138,0.24), inset 0 1px 0 rgba(255,255,255,0.18);
+}
 .compare-badge {
-  display: inline-block;
-  padding: 4px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
   border-radius: 100px;
   font-size: 0.6875rem;
   font-weight: 700;
@@ -531,7 +1756,15 @@ nav {
   margin-bottom: 24px;
 }
 .old .compare-badge { background: #FEE2E2; color: var(--red); }
-.new .compare-badge { background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.8); }
+.new .compare-badge {
+  background: rgba(245,247,251,0.96);
+  color: var(--accent);
+}
+.compare-badge-logo {
+  height: 17px;
+  width: auto;
+  display: block;
+}
 .compare-card h3 {
   font-family: var(--font-display);
   font-size: 1.75rem;
@@ -559,11 +1792,66 @@ nav {
   font-size: 0.75rem;
 }
 .old .compare-icon { color: var(--red); }
-.new .compare-icon { color: var(--green); }
+.new .compare-icon { color: #DCE7FF; }
+.compare-new-lead {
+  position: relative;
+  z-index: 1;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.86);
+  width: 100%;
+  max-width: 42ch;
+  margin: 0 auto 22px;
+  text-align: left;
+}
+.compare-card.new h3,
+.compare-card.new .compare-list {
+  position: relative;
+  z-index: 1;
+}
+.compare-card.new h3 {
+  margin-bottom: 14px;
+}
+.compare-card.new .compare-list {
+  gap: 12px;
+}
+.compare-card.new .compare-list li {
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+}
 
 /* ===== FEATURES ===== */
 .features {
   padding: 100px 0;
+  background: var(--text-primary);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.features::before {
+  content: '';
+  position: absolute;
+  top: -180px;
+  left: -140px;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(45,91,255,0.16), transparent 72%);
+  pointer-events: none;
+}
+.features .container {
+  position: relative;
+  z-index: 1;
+}
+.features .section-label {
+  color: rgba(255,255,255,0.42);
+}
+.features .section-header h2 {
+  color: #fff;
+}
+.features .section-header p {
+  color: rgba(255,255,255,0.64);
 }
 .features-grid {
   display: grid;
@@ -572,14 +1860,18 @@ nav {
 }
 .feature-card {
   padding: 36px;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
   border-radius: var(--radius);
   transition: all var(--transition);
   position: relative;
   overflow: hidden;
 }
-.feature-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); border-color: var(--accent); }
+.feature-card:hover {
+  box-shadow: 0 22px 40px rgba(0,0,0,0.2);
+  transform: translateY(-3px);
+  border-color: rgba(45,91,255,0.45);
+}
 .feature-card::before {
   content: '';
   position: absolute;
@@ -590,23 +1882,96 @@ nav {
   transition: opacity var(--transition);
 }
 .feature-card:hover::before { opacity: 1; }
+.feature-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+.feature-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(45,91,255,0.24), rgba(45,91,255,0.09));
+  border: 1px solid rgba(45,91,255,0.24);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.12);
+  transform-origin: center;
+}
+.feature-icon {
+  width: 24px;
+  height: 24px;
+  color: #9EB5FF;
+  overflow: visible;
+  transition: transform 420ms ease;
+}
+.feature-icon .muted {
+  opacity: 0.35;
+}
+.feature-icon * {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 420ms ease, opacity 420ms ease, stroke 420ms ease, fill 420ms ease;
+}
 .feature-num {
   font-size: 0.6875rem;
   font-weight: 700;
   color: var(--accent);
   letter-spacing: 0.08em;
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 .feature-card h3 {
   font-size: 1.125rem;
   font-weight: 700;
   letter-spacing: -0.01em;
   margin-bottom: 10px;
+  color: #fff;
 }
 .feature-card p {
   font-size: 0.9375rem;
-  color: var(--text-secondary);
+  color: rgba(255,255,255,0.64);
   line-height: 1.6;
+}
+.feature-flow:hover .feature-icon-wrap { animation: featureFlowPulse 720ms ease; }
+.feature-ai:hover .feature-icon-wrap { animation: featureAIPulse 760ms ease; }
+.feature-profile:hover .feature-icon-wrap { animation: featureProfileLift 720ms ease; }
+.feature-logic:hover .feature-icon-wrap { animation: featureLogicTilt 760ms ease; }
+.feature-data:hover .feature-icon-wrap { animation: featureDataShift 760ms ease; }
+.feature-pages:hover .feature-icon-wrap { animation: featurePageBloom 760ms ease; }
+.feature-flow:hover .icon-flow { transform: translateY(-1px) scale(1.05); }
+.feature-ai:hover .icon-ai { transform: scale(1.08) rotate(8deg); }
+.feature-profile:hover .icon-profile { transform: translateY(-1px) scale(1.04); }
+.feature-logic:hover .icon-logic { transform: rotate(-6deg) scale(1.04); }
+.feature-data:hover .icon-data { transform: translateY(-1px) scale(1.05); }
+.feature-pages:hover .icon-pages { transform: scale(1.06); }
+@keyframes featureFlowPulse {
+  0%, 100% { transform: scale(1); }
+  45% { transform: scale(1.08) rotate(-4deg); }
+}
+@keyframes featureAIPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); box-shadow: inset 0 1px 0 rgba(255,255,255,0.9), 0 10px 22px rgba(45,91,255,0.14); }
+}
+@keyframes featureProfileLift {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px) scale(1.05); }
+}
+@keyframes featureLogicTilt {
+  0%, 100% { transform: rotate(0deg); }
+  30% { transform: rotate(-6deg) scale(1.05); }
+  70% { transform: rotate(4deg) scale(1.02); }
+}
+@keyframes featureDataShift {
+  0%, 100% { transform: translateX(0); }
+  35% { transform: translateX(-2px) scale(1.04); }
+  70% { transform: translateX(2px) scale(1.04); }
+}
+@keyframes featurePageBloom {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08) translateY(-2px); }
 }
 
 /* ===== BIG FEATURE (Dashboard preview) ===== */
@@ -628,7 +1993,11 @@ nav {
   font-weight: 400;
   margin-bottom: 20px;
 }
-.big-feature h2 em { font-style: italic; }
+.big-feature h2 em {
+  display: block;
+  color: var(--accent);
+  font-style: italic;
+}
 .big-feature p {
   font-size: 1.0625rem;
   color: var(--text-secondary);
@@ -645,8 +2014,8 @@ nav {
 }
 .check-icon {
   width: 22px; height: 22px;
-  background: var(--green-light);
-  color: var(--green);
+  background: var(--accent-light);
+  color: var(--accent);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -685,9 +2054,13 @@ nav {
   font-size: 1rem;
   flex-shrink: 0;
 }
-.flow-card-icon.blue { background: var(--accent-light); }
-.flow-card-icon.green { background: var(--green-light); }
-.flow-card-icon.orange { background: var(--orange-light); }
+.flow-card-icon svg {
+  width: 18px;
+  height: 18px;
+}
+.flow-card-icon.blue { background: var(--accent-light); color: var(--accent); }
+.flow-card-icon.green { background: var(--green-light); color: var(--green); }
+.flow-card-icon.orange { background: var(--orange-light); color: var(--orange); }
 .flow-card-text { flex: 1; }
 .flow-card-title { font-size: 0.8125rem; font-weight: 600; }
 .flow-card-desc { font-size: 0.75rem; color: var(--text-tertiary); }
@@ -792,7 +2165,7 @@ nav {
 .ai-step-num {
   font-size: 3rem;
   font-weight: 700;
-  color: rgba(255,255,255,0.1);
+  color: var(--accent);
   line-height: 1;
   margin-bottom: 20px;
   letter-spacing: -0.04em;
@@ -884,7 +2257,7 @@ nav {
   position: relative;
 }
 .pricing-card.featured::before {
-  content: 'MOST POPULAR';
+  content: 'RECOMMENDED';
   position: absolute;
   top: -12px;
   left: 50%;
@@ -896,6 +2269,9 @@ nav {
   letter-spacing: 0.08em;
   padding: 4px 14px;
   border-radius: 100px;
+}
+.pricing-card.featured .btn-primary-lg {
+  color: #fff;
 }
 .pricing-name { font-size: 1.125rem; font-weight: 700; margin-bottom: 6px; letter-spacing: -0.01em; }
 .pricing-desc { font-size: 0.8125rem; color: var(--text-tertiary); margin-bottom: 24px; }
@@ -911,7 +2287,7 @@ nav {
   font-size: 0.875rem;
   color: var(--text-secondary);
 }
-.pricing-check { color: var(--green); font-weight: 700; font-size: 0.875rem; }
+.pricing-check { color: var(--accent); font-weight: 700; font-size: 0.875rem; }
 .pricing-card .btn-primary-lg { width: 100%; justify-content: center; }
 .pricing-card .btn-secondary-lg { width: 100%; justify-content: center; }
 
@@ -974,10 +2350,11 @@ nav {
   pointer-events: none;
 }
 .invite-inner {
-  max-width: 480px;
+  max-width: 840px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  text-align: center;
 }
 .invite-badge {
   display: inline-flex;
@@ -992,12 +2369,12 @@ nav {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.7);
-  margin-bottom: 24px;
+  margin-bottom: 8px;
 }
 .invite-badge-dot {
   width: 6px;
   height: 6px;
-  background: var(--green);
+  background: var(--accent);
   border-radius: 50%;
   animation: pulse-dot 2s infinite;
 }
@@ -1008,19 +2385,27 @@ nav {
   letter-spacing: -0.03em;
   font-weight: 400;
   margin-bottom: 12px;
+  text-align: center;
+  white-space: nowrap;
+  width: 100%;
+  max-width: none;
 }
 .invite-section .invite-sub {
   font-size: 1rem;
   color: rgba(255,255,255,0.55);
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   line-height: 1.6;
+  text-align: center;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .invite-spots {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  margin-bottom: 36px;
+  margin-bottom: 28px;
   font-size: 0.875rem;
   font-weight: 500;
   color: rgba(255,255,255,0.6);
@@ -1033,6 +2418,8 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  max-width: 480px;
+  margin: 0 auto;
 }
 .invite-form input,
 .invite-form select {
@@ -1044,11 +2431,25 @@ nav {
   border: 1px solid rgba(255,255,255,0.12);
   border-radius: 12px;
   color: #fff;
-  transition: all var(--transition);
+  transition: border-color var(--transition), background-color var(--transition), box-shadow var(--transition), color var(--transition);
 }
 .invite-form input::placeholder,
 .invite-form select {
   color: rgba(255,255,255,0.4);
+}
+.invite-form select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 52px;
+  color: rgba(255,255,255,0.4);
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 1.5L6 6L10.5 1.5' stroke='rgba(255,255,255,0.62)' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  background-size: 12px 8px;
+}
+.invite-form select.has-value {
+  color: #fff;
 }
 .invite-form input:focus,
 .invite-form select:focus {
@@ -1251,27 +2652,186 @@ footer {
   .features-grid { grid-template-columns: repeat(2, 1fr); }
   .pricing-grid { grid-template-columns: 1fr; max-width: 420px; }
   .ai-steps { grid-template-columns: 1fr; max-width: 500px; margin-left: auto; margin-right: auto; }
-  .dash-body { grid-template-columns: 1fr; }
-  .dash-sidebar { flex-direction: row; overflow-x: auto; gap: 2px; }
+  .hero-visual { margin-top: 48px; }
+  .hero-dashboard { --widget-body-height: auto; }
+  .dash-toolbar-title { margin-right: 0; }
+  .dash-body {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    height: auto;
+    padding: 18px;
+  }
+  .dash-sidebar {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 8px;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+  .dash-sidebar::-webkit-scrollbar { display: none; }
+  .dash-nav-item,
+  .dash-sidebar-cta {
+    flex: 0 0 auto;
+    width: auto;
+    min-width: max-content;
+  }
+  .dash-sidebar-cta { margin-top: 0; }
+  .flowboard-shell,
+  .profiles-shell,
+  .integrations-shell,
+  .analytics-panel,
+  .profiles-panel { height: auto; min-height: 0; }
+  .dash-explainer { align-self: stretch; padding-top: 0; }
+  .dash-explainer-card { min-height: 0; }
+  .profiles-metrics { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
+  .container { padding: 0 18px; }
   .nav-links { display: none; }
+  .nav-actions { display: none; }
   .mobile-toggle { display: flex; }
-  .hero { padding: 60px 0 40px; }
-  .hero h1 { font-size: 2.5rem; }
+  .hero { padding: 34px 0 40px; }
+  .hero-top { padding: 12px 0 22px; }
+  .hero h1 { font-size: 2.2rem; }
   .hero-actions { flex-direction: column; width: 100%; }
   .hero-actions .btn-primary-lg,
   .hero-actions .btn-secondary-lg { width: 100%; justify-content: center; }
+  .hero-visual {
+    margin-top: 36px;
+    scroll-margin-top: 84px;
+  }
+  .hero-dashboard {
+    border-radius: 18px;
+    transform-style: flat;
+    box-shadow: var(--shadow-lg);
+  }
+  .dash-toolbar {
+    padding: 12px 14px;
+    gap: 6px;
+  }
+  .dash-toolbar-title {
+    margin-right: 0;
+    font-size: 0.6875rem;
+    gap: 6px;
+    min-width: 0;
+  }
+  .dash-toolbar-logo { height: 16px; }
+  .dash-toolbar-title-text {
+    white-space: normal;
+    line-height: 1.2;
+  }
+  .dash-body {
+    padding: 14px;
+    gap: 12px;
+  }
+  .dash-sidebar {
+    gap: 6px;
+    margin: 0 -2px;
+  }
+  .dash-nav-item,
+  .dash-sidebar-cta {
+    padding: 10px 12px;
+    font-size: 0.75rem;
+  }
+  .dash-stats { grid-template-columns: 1fr; }
+  .stat-card { padding: 16px; }
+  .widget-view-head,
+  .profiles-head {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .widget-view-subtitle { max-width: none; }
+  .flowboard-shell,
+  .profiles-shell,
+  .integrations-shell {
+    padding: 12px;
+  }
+  .flowboard-canvas {
+    min-height: 260px;
+    padding: 10px;
+    border-radius: 12px;
+  }
+  .flowboard-hint {
+    left: 10px;
+    bottom: 10px;
+    padding: 7px 9px;
+    font-size: 0.625rem;
+  }
+  .flowboard-lane {
+    min-width: 716px;
+    grid-template-columns: 140px 34px 140px 34px 140px 34px 140px;
+    padding: 10px 12px 10px 4px;
+  }
+  .flow-node {
+    width: 140px;
+    min-height: 0;
+    padding: 9px 10px;
+  }
+  .flow-node-title { font-size: 0.75rem; }
+  .flow-node-desc {
+    font-size: 0.6875rem;
+    margin-top: 6px;
+    margin-bottom: 7px;
+  }
+  .profiles-metrics { grid-template-columns: repeat(2, 1fr); }
+  .profiles-table-head,
+  .profiles-row { min-width: 680px; }
+  .analytics-cards { grid-template-columns: 1fr; }
+  .analytics-card { min-height: 116px; }
   .problem-grid,
   .big-feature-inner,
   .comparison-grid { grid-template-columns: 1fr; gap: 40px; }
+  .compare-card { padding: 28px; }
+  .compare-card.new,
+  .compare-card.new:hover { transform: none; }
+  .compare-new-lead { max-width: none; }
   .features-grid { grid-template-columns: 1fr; }
-  .metrics-grid { grid-template-columns: repeat(2, 1fr); }
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .feature-card { padding: 28px; }
+  .big-feature-visual { padding: 18px; }
+  .metrics-grid { grid-template-columns: 1fr; }
+  .metric-card { padding: 28px 20px; }
+  .metric-value { font-size: 2.4rem; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .footer-brand-desc { max-width: none; }
   .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
-  .dash-stats { grid-template-columns: repeat(2, 1fr); }
+  .footer-bottom-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 10px;
+  }
   section, .hero, .problem, .comparison, .features, .big-feature,
   .metrics, .ai-section, .pricing, .invite-section { padding: 60px 0; }
+}
+@media (max-width: 560px) {
+  .announcement { font-size: 0.75rem; }
+  .hero h1,
+  .problem h2,
+  .section-header h2,
+  .big-feature h2,
+  .invite-section h2 { font-size: clamp(1.9rem, 9vw, 2.35rem); }
+  .invite-section h2 { white-space: normal; }
+  .hero-sub,
+  .problem p,
+  .section-header p,
+  .big-feature p,
+  .invite-section .invite-sub { font-size: 0.95rem; }
+  .problem-stat-card {
+    padding: 16px 18px;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .problem-stat-num { font-size: 1.8rem; }
+  .compare-card,
+  .feature-card,
+  .ai-step,
+  .pricing-card { padding: 24px; }
+  .profiles-metrics { grid-template-columns: 1fr; }
+  .flowboard-lane {
+    min-width: 640px;
+    grid-template-columns: 128px 28px 128px 28px 128px 28px 128px;
+  }
+  .flow-node { width: 128px; }
 }
 
 /* ===== SCROLL ANIMATIONS ===== */
@@ -1283,6 +2843,32 @@ footer {
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero-badge,
+  .hero h1,
+  .hero-sub,
+  .hero-actions,
+  .hero-note,
+  .hero-visual,
+  .hero-dashboard::after,
+  .chart-area::after,
+  .chart-bar,
+  .hero-top-particles span,
+  .flow-travel-dot,
+  .flow-link::before,
+  .flow-branch-drop::before {
+    animation: none !important;
+  }
+  .hero-dashboard,
+  .stat-card,
+  .chart-bar,
+  .reveal,
+  .reveal.visible {
+    transition: none !important;
+    transform: none !important;
+  }
 }
 </style>
 <!-- Analytics: Add your Plausible script when ready -->
@@ -1302,12 +2888,12 @@ footer {
 <nav>
   <div class="nav-inner">
     <a href="/" class="nav-logo" aria-label="FlowOS Home">
-      <div class="nav-logo-icon">F</div>
-      FlowOS
+      <img src="https://storage.googleapis.com/vulive-v2.firebasestorage.app/businesses/dRRyYIfFUpGK2vEJ9yAw/assets/a51134b0-8471-4a31-8fa7-adc014a776f0.png" class="nav-logo-image" alt="FlowOS logo">
     </a>
     <ul class="nav-links">
-      <li><a href="#features">Features</a></li>
-      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#widget-preview">Features</a></li>
+      <li><a href="#how-it-works">What Is a Flow?</a></li>
+      <li><a href="#features">Platform</a></li>
       <li><a href="#pricing">Pricing</a></li>
     </ul>
     <div class="nav-actions">
@@ -1320,8 +2906,9 @@ footer {
   </div>
   <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
     <ul class="mobile-menu-links">
-      <li><a href="#features">Features</a></li>
-      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#widget-preview">Features</a></li>
+      <li><a href="#how-it-works">What Is a Flow?</a></li>
+      <li><a href="#features">Platform</a></li>
       <li><a href="#pricing">Pricing</a></li>
     </ul>
     <div class="mobile-menu-actions">
@@ -1335,109 +2922,538 @@ footer {
 <main id="main">
 <section class="hero">
   <div class="container">
-    <div class="hero-badge">
-      <div class="hero-badge-dot"></div>
-      Now in Early Access
+    <div class="hero-top">
+      <div class="hero-top-particles" aria-hidden="true">
+        <span class="dot-1"></span>
+        <span class="dot-2"></span>
+        <span class="dot-3"></span>
+        <span class="dot-4"></span>
+        <span class="dot-5"></span>
+        <span class="dot-6"></span>
+        <span class="dot-7"></span>
+        <span class="dot-8"></span>
+        <span class="dot-9"></span>
+        <span class="dot-10"></span>
+        <span class="dot-11"></span>
+        <span class="dot-12"></span>
+        <span class="dot-13"></span>
+        <span class="dot-14"></span>
+        <span class="dot-15"></span>
+        <span class="dot-16"></span>
+        <span class="dot-17"></span>
+        <span class="dot-18"></span>
+        <span class="dot-19"></span>
+        <span class="dot-20"></span>
+        <span class="dot-21"></span>
+        <span class="dot-22"></span>
+        <span class="dot-23"></span>
+        <span class="dot-24"></span>
+      </div>
+      <div class="hero-top-copy">
+        <div class="hero-badge">
+          <div class="hero-badge-dot"></div>
+          Now in Early Access
+        </div>
+        <h1>Replace your entire marketing stack with <em>one system that thinks</em></h1>
+        <p class="hero-sub">Stop duct-taping 30 tools together. FlowOS is a single intelligent platform that learns who your users are, adapts their journey in real time, and never lets a lead go cold.</p>
+        <div class="hero-actions">
+          <a href="#cta" class="btn-primary-lg">
+            Start Building Flows — Free
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <p class="hero-note">No credit card · No code · Free up to 1,000 contacts</p>
+      </div>
     </div>
-    <h1>Replace your entire marketing stack with <em>one system that thinks</em></h1>
-    <p class="hero-sub">Stop duct-taping 30 tools together. FlowOS is a single intelligent platform that learns who your users are, adapts their journey in real time, and never lets a lead go cold.</p>
-    <div class="hero-actions">
-      <a href="#cta" class="btn-primary-lg">
-        Start Building Flows — Free
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-    </div>
-    <p class="hero-note">No credit card · No code · Free up to 1,000 contacts</p>
 
     <!-- Dashboard Preview -->
-    <div class="hero-visual">
-      <div class="hero-dashboard">
-        <div class="dash-toolbar">
-          <div class="dash-dot r"></div>
-          <div class="dash-dot y"></div>
-          <div class="dash-dot g"></div>
-          <div class="dash-toolbar-title">FlowOS — Marketing Command Center<span class="dash-cursor"></span></div>
-        </div>
-        <div class="dash-body">
-          <div class="dash-sidebar">
-            <div class="dash-nav-item active">
-              <svg class="dash-nav-icon" viewBox="0 0 18 18" fill="none"><rect x="1" y="1" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="1" y="11" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="11" y="1" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="11" y="11" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/></svg>
-              Dashboard
-            </div>
-            <div class="dash-nav-item">
-              <svg class="dash-nav-icon" viewBox="0 0 18 18" fill="none"><path d="M1 9h4l2-5 3 10 2-5h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Flows
-            </div>
-            <div class="dash-nav-item">
-              <svg class="dash-nav-icon" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="6" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M3 16c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="currentColor" stroke-width="1.5"/></svg>
-              Profiles
-            </div>
-            <div class="dash-nav-item">
-              <svg class="dash-nav-icon" viewBox="0 0 18 18" fill="none"><rect x="2" y="3" width="14" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M2 7h14" stroke="currentColor" stroke-width="1.5"/></svg>
-              Campaigns
-            </div>
-            <div class="dash-nav-item">
-              <svg class="dash-nav-icon" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M9 5v4l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-              Analytics
+    <div class="hero-visual" id="widget-preview">
+      <div class="hero-widget-stage">
+        <div class="hero-dashboard" id="hero-dashboard">
+          <div class="dash-toolbar">
+            <div class="dash-dot r"></div>
+            <div class="dash-dot y"></div>
+            <div class="dash-dot g"></div>
+            <div class="dash-toolbar-title">
+              <img src="https://storage.googleapis.com/vulive-v2.firebasestorage.app/businesses/dRRyYIfFUpGK2vEJ9yAw/assets/a51134b0-8471-4a31-8fa7-adc014a776f0.png" class="dash-toolbar-logo" alt="FlowOS logo">
+              <span class="dash-toolbar-title-text">Marketing Command Center</span>
             </div>
           </div>
-          <div class="dash-content">
-            <div class="dash-stats">
-              <div class="stat-card">
-                <div class="stat-label">AI Flows</div>
-                <div class="stat-value">847</div>
-                <div class="stat-change up">↑ 12.4%</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-label">Active Journeys</div>
-                <div class="stat-value">12.4K</div>
-                <div class="stat-change up">↑ 8.2%</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-label">Conv. Rate</div>
-                <div class="stat-value">34%</div>
-                <div class="stat-change up">↑ 5.1%</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-label">Revenue Attr.</div>
-                <div class="stat-value">$1.2M</div>
-                <div class="stat-change up">↑ 22.6%</div>
-              </div>
-            </div>
-            <div class="dash-chart">
-              <div class="chart-header">
-                <div class="chart-title">Flow Performance</div>
-                <div class="chart-tabs">
-                  <span class="chart-tab">7d</span>
-                  <span class="chart-tab active">30d</span>
-                  <span class="chart-tab">90d</span>
+          <div class="dash-body">
+            <div class="dash-sidebar">
+            <button class="dash-nav-item active" type="button" data-view="dashboard" aria-pressed="true">
+              <svg class="dash-nav-icon" viewBox="0 0 18 18" fill="none"><rect x="1" y="1" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="1" y="11" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="11" y="1" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="11" y="11" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/></svg>
+              Dashboard
+            </button>
+            <button class="dash-nav-item" type="button" data-view="flows" aria-pressed="false">
+              <svg class="dash-nav-icon" viewBox="0 0 18 18" fill="none"><circle cx="3" cy="9" r="1.75" stroke="currentColor" stroke-width="1.5"/><circle cx="9" cy="4" r="1.75" stroke="currentColor" stroke-width="1.5"/><circle cx="15" cy="4" r="1.75" stroke="currentColor" stroke-width="1.5"/><circle cx="15" cy="14" r="1.75" stroke="currentColor" stroke-width="1.5"/><path d="M4.7 8.1L7.3 5.7M10.75 4H13.25M10.2 5.1L13.7 12.9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Flows
+            </button>
+            <button class="dash-nav-item" type="button" data-view="profiles" aria-pressed="false">
+              <svg class="dash-nav-icon" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="6" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M3 16c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="currentColor" stroke-width="1.5"/></svg>
+              Profiles
+            </button>
+            <button class="dash-nav-item" type="button" data-view="integrations" aria-pressed="false">
+              <svg class="dash-nav-icon" viewBox="0 0 18 18" fill="none"><path d="M7.2 2.75c0-0.97 0.78-1.75 1.75-1.75s1.75 0.78 1.75 1.75v0.85h1.35c0.8 0 1.45 0.65 1.45 1.45v1.35h0.85c0.97 0 1.75 0.78 1.75 1.75s-0.78 1.75-1.75 1.75h-0.85v1.35c0 0.8-0.65 1.45-1.45 1.45H10.7v-0.85c0-0.97-0.78-1.75-1.75-1.75s-1.75 0.78-1.75 1.75v0.85H5.85c-0.8 0-1.45-0.65-1.45-1.45V9.85h-0.85c-0.97 0-1.75-0.78-1.75-1.75s0.78-1.75 1.75-1.75h0.85V5.05c0-0.8 0.65-1.45 1.45-1.45H7.2V2.75Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+              Integrations
+            </button>
+            <button class="dash-nav-item" type="button" data-view="analytics" aria-pressed="false">
+              <svg class="dash-nav-icon" viewBox="0 0 18 18" fill="none"><path d="M2.5 15.5H15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><rect x="3" y="9.5" width="2.5" height="4" rx="0.8" stroke="currentColor" stroke-width="1.5"/><rect x="7.75" y="6.5" width="2.5" height="7" rx="0.8" stroke="currentColor" stroke-width="1.5"/><rect x="12.5" y="3.5" width="2.5" height="10" rx="0.8" stroke="currentColor" stroke-width="1.5"/></svg>
+              Analytics
+            </button>
+            <a href="#cta" class="btn-primary dash-sidebar-cta">Start Building Flows - Free</a>
+          </div>
+            <div class="dash-content">
+            <div class="dash-default-view" id="dash-default-view">
+              <div class="dash-stats">
+                <div class="stat-card">
+                  <div class="stat-label">AI Flows</div>
+                  <div class="stat-value" data-target="847" data-format="number">847</div>
+                  <div class="stat-change up">↑ 12.4%</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-label">Active Journeys</div>
+                  <div class="stat-value" data-target="12400" data-format="compact">12.4K</div>
+                  <div class="stat-change up">↑ 8.2%</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-label">Conv. Rate</div>
+                  <div class="stat-value" data-target="34" data-format="percent">34%</div>
+                  <div class="stat-change up">↑ 5.1%</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-label">Revenue Attr.</div>
+                  <div class="stat-value" data-target="1200000" data-format="currency-compact">$1.2M</div>
+                  <div class="stat-change up">↑ 22.6%</div>
                 </div>
               </div>
-              <div class="chart-area">
-                <div class="chart-bar" style="height:30%"></div>
-                <div class="chart-bar" style="height:45%"></div>
-                <div class="chart-bar" style="height:35%"></div>
-                <div class="chart-bar" style="height:60%"></div>
-                <div class="chart-bar" style="height:50%"></div>
-                <div class="chart-bar" style="height:42%"></div>
-                <div class="chart-bar" style="height:65%"></div>
-                <div class="chart-bar" style="height:55%"></div>
-                <div class="chart-bar" style="height:70%"></div>
-                <div class="chart-bar" style="height:48%"></div>
-                <div class="chart-bar" style="height:58%"></div>
-                <div class="chart-bar" style="height:72%"></div>
-                <div class="chart-bar" style="height:62%"></div>
-                <div class="chart-bar" style="height:75%"></div>
-                <div class="chart-bar" style="height:68%"></div>
-                <div class="chart-bar" style="height:82%"></div>
-                <div class="chart-bar" style="height:78%"></div>
-                <div class="chart-bar" style="height:85%"></div>
-                <div class="chart-bar" style="height:72%"></div>
-                <div class="chart-bar" style="height:88%"></div>
-                <div class="chart-bar" style="height:80%"></div>
-                <div class="chart-bar" style="height:92%"></div>
-                <div class="chart-bar" style="height:85%"></div>
-                <div class="chart-bar" style="height:95%"></div>
+              <div class="dash-chart">
+                <div class="chart-header">
+                  <div class="chart-title" id="dash-chart-title">Flow Performance</div>
+                  <div class="chart-tabs" role="tablist" aria-label="Flow performance range">
+                    <button type="button" class="chart-tab" data-range="7d" aria-pressed="false">7d</button>
+                    <button type="button" class="chart-tab active" data-range="30d" aria-pressed="true">30d</button>
+                    <button type="button" class="chart-tab" data-range="90d" aria-pressed="false">90d</button>
+                  </div>
+                </div>
+                <div class="chart-area" id="dash-chart-area">
+                  <div class="chart-bar" style="height:30%"></div>
+                  <div class="chart-bar" style="height:45%"></div>
+                  <div class="chart-bar" style="height:35%"></div>
+                  <div class="chart-bar" style="height:60%"></div>
+                  <div class="chart-bar" style="height:50%"></div>
+                  <div class="chart-bar" style="height:42%"></div>
+                  <div class="chart-bar" style="height:65%"></div>
+                  <div class="chart-bar" style="height:55%"></div>
+                  <div class="chart-bar" style="height:70%"></div>
+                  <div class="chart-bar" style="height:48%"></div>
+                  <div class="chart-bar" style="height:58%"></div>
+                  <div class="chart-bar" style="height:72%"></div>
+                  <div class="chart-bar" style="height:62%"></div>
+                  <div class="chart-bar" style="height:75%"></div>
+                  <div class="chart-bar" style="height:68%"></div>
+                  <div class="chart-bar" style="height:82%"></div>
+                  <div class="chart-bar" style="height:78%"></div>
+                  <div class="chart-bar" style="height:85%"></div>
+                  <div class="chart-bar" style="height:72%"></div>
+                  <div class="chart-bar" style="height:88%"></div>
+                  <div class="chart-bar" style="height:80%"></div>
+                  <div class="chart-bar" style="height:92%"></div>
+                  <div class="chart-bar" style="height:85%"></div>
+                  <div class="chart-bar" style="height:95%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="dash-flows-view" id="dash-flows-view" hidden>
+              <div class="flowboard-shell">
+                <div class="flowboard-header widget-view-head">
+                  <div class="widget-view-copy">
+                    <div class="flowboard-eyebrow widget-view-kicker">Flow Builder</div>
+                    <div class="flowboard-title widget-view-title">Qualification Quiz Flow</div>
+                    <div class="widget-view-subtitle">Visualize the lead path from capture through qualification, booking, and nurture.</div>
+                  </div>
+                </div>
+                <div class="flowboard-canvas" aria-label="Adaptive sales funnel builder preview">
+                  <div class="flowboard-hint" aria-hidden="true">
+                    <span class="flowboard-hint-icon">☞</span>
+                    Drag to explore
+                  </div>
+                  <div class="flowboard-lane">
+                    <div class="flow-node page flow-node-entry" tabindex="0">
+                      <div class="flow-node-stage">Page</div>
+                      <div class="flow-node-title">Landing Page + Lead Capture</div>
+                      <div class="flow-node-desc">Primary conversion page captures lead data and starts the journey.</div>
+                      <div class="flow-node-meta">Entry point</div>
+                    </div>
+                    <div class="flow-link flow-link-1">
+                      <span class="flow-travel-dot"></span>
+                      <span class="flow-travel-dot delay"></span>
+                    </div>
+                    <div class="flow-node quiz flow-node-quiz" tabindex="0">
+                      <div class="flow-node-stage">Qualification</div>
+                      <div class="flow-node-title">Qualification Quiz</div>
+                      <div class="flow-node-desc">Lead answers a short quiz so FlowOS can segment and score intent.</div>
+                      <div class="flow-node-meta">Intent scoring</div>
+                    </div>
+                    <div class="flow-link flow-link-2">
+                      <span class="flow-travel-dot"></span>
+                      <span class="flow-travel-dot delay"></span>
+                    </div>
+                    <div class="flow-node page flow-node-scheduler" tabindex="0">
+                      <div class="flow-node-stage">Page</div>
+                      <div class="flow-node-title">Meeting Scheduler</div>
+                      <div class="flow-node-desc">Qualified leads land on the scheduling page and book instantly.</div>
+                      <div class="flow-node-meta">Calendar handoff</div>
+                    </div>
+                    <div class="flow-link flow-link-3">
+                      <span class="flow-travel-dot"></span>
+                      <span class="flow-travel-dot delay"></span>
+                    </div>
+                    <div class="flow-node page flow-node-confirm-page" tabindex="0">
+                      <div class="flow-node-stage">Page</div>
+                      <div class="flow-node-title">Confirmation Page</div>
+                      <div class="flow-node-desc">Booked leads land on a confirmation screen with next steps and prep details.</div>
+                      <div class="flow-node-meta">Booking confirmed</div>
+                    </div>
+                    <div class="flow-branch-drop">
+                      <span class="flow-travel-dot vertical"></span>
+                      <span class="flow-travel-dot vertical delay"></span>
+                    </div>
+                    <div class="flow-node email flow-node-nurture" tabindex="0">
+                      <div class="flow-node-stage">Email</div>
+                      <div class="flow-node-title">Nurture Email Sequence</div>
+                      <div class="flow-node-desc">Alternative offers and education keep the lead warm until they are ready.</div>
+                      <div class="flow-node-meta">Re-promote later</div>
+                    </div>
+                    <div class="flow-branch-drop flow-branch-drop-confirm">
+                      <span class="flow-travel-dot vertical"></span>
+                      <span class="flow-travel-dot vertical delay"></span>
+                    </div>
+                    <div class="flow-node email flow-node-confirm-email" tabindex="0">
+                      <div class="flow-node-stage">Email</div>
+                      <div class="flow-node-title">Confirmation Email Sequence</div>
+                      <div class="flow-node-desc">Follow-up emails confirm the booking, deliver details, and keep the lead warm.</div>
+                      <div class="flow-node-meta">Post-booking sequence</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dash-profiles-view" id="dash-profiles-view" hidden>
+              <div class="profiles-shell">
+                <div class="profiles-head widget-view-head">
+                  <div class="widget-view-copy">
+                    <div class="profiles-eyebrow widget-view-kicker">Profiles</div>
+                    <div class="profiles-title widget-view-title">Contacts & Engagement Intelligence</div>
+                    <div class="profiles-subtitle widget-view-subtitle">Track journeys, attribution, and lead activity in one view.</div>
+                  </div>
+                </div>
+                <div class="profiles-metrics">
+                  <div class="profiles-metric">
+                    <div class="profiles-metric-label">Total Contacts</div>
+                    <div class="profiles-metric-value">50</div>
+                  </div>
+                  <div class="profiles-metric hot">
+                    <div class="profiles-metric-label">Hot / High Intent</div>
+                    <div class="profiles-metric-value">10</div>
+                  </div>
+                  <div class="profiles-metric warm">
+                    <div class="profiles-metric-label">Warm / Engaged</div>
+                    <div class="profiles-metric-value">13</div>
+                  </div>
+                  <div class="profiles-metric cold">
+                    <div class="profiles-metric-label">Cold / New Leads</div>
+                    <div class="profiles-metric-value">27</div>
+                  </div>
+                </div>
+                <div class="profiles-panel">
+                  <div class="profiles-segments">
+                    <span class="profiles-chip active">All (50)</span>
+                    <span class="profiles-chip">MQL (13)</span>
+                    <span class="profiles-chip">SQL (10)</span>
+                    <span class="profiles-chip">Re-engage (8)</span>
+                    <span class="profiles-filter">Cohort ROAS</span>
+                  </div>
+                  <div class="profiles-table" aria-label="Profiles tab preview">
+                    <div class="profiles-table-head">
+                      <div>Contact</div>
+                      <div>Activity</div>
+                      <div>Status</div>
+                      <div>First Source</div>
+                      <div>Revenue</div>
+                      <div>Actions</div>
+                    </div>
+                    <div class="profiles-row">
+                      <div class="profiles-contact">
+                        <div class="profiles-avatar blue">MH</div>
+                        <div class="profiles-contact-text">
+                          <div class="profiles-name">Mara Holloway</div>
+                          <div class="profiles-email">mara.holloway@northstar-example.com</div>
+                        </div>
+                      </div>
+                      <div>1 step completed</div>
+                      <div><span class="profiles-status cold">Cold</span></div>
+                      <div><span class="profiles-source">Facebook Ads</span></div>
+                      <div>$250</div>
+                      <div class="profiles-action">View Details</div>
+                    </div>
+                    <div class="profiles-row">
+                      <div class="profiles-contact">
+                        <div class="profiles-avatar green">MF</div>
+                        <div class="profiles-contact-text">
+                          <div class="profiles-name">Micah Fairmont</div>
+                          <div class="profiles-email">micah.fairmont@brightpath-example.com</div>
+                        </div>
+                      </div>
+                      <div>15 steps completed</div>
+                      <div><span class="profiles-status hot">Hot</span></div>
+                      <div><span class="profiles-source">Organic Search</span></div>
+                      <div>$8.5K</div>
+                      <div class="profiles-action">View Details</div>
+                    </div>
+                    <div class="profiles-row">
+                      <div class="profiles-contact">
+                        <div class="profiles-avatar pink">KH</div>
+                        <div class="profiles-contact-text">
+                          <div class="profiles-name">Kiera Hawthorne</div>
+                          <div class="profiles-email">kiera.hawthorne@lumen-example.com</div>
+                        </div>
+                      </div>
+                      <div>2 steps completed</div>
+                      <div><span class="profiles-status cold">Cold</span></div>
+                      <div><span class="profiles-source">Email Campaign</span></div>
+                      <div>-</div>
+                      <div class="profiles-action">View Details</div>
+                    </div>
+                    <div class="profiles-row">
+                      <div class="profiles-contact">
+                        <div class="profiles-avatar orange">SS</div>
+                        <div class="profiles-contact-text">
+                          <div class="profiles-name">Soren Sinclair</div>
+                          <div class="profiles-email">soren.sinclair@harborlane-example.com</div>
+                        </div>
+                      </div>
+                      <div>9 steps completed</div>
+                      <div><span class="profiles-status hot">Hot</span></div>
+                      <div><span class="profiles-source">Direct</span></div>
+                      <div>$3.5K</div>
+                      <div class="profiles-action">View Details</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dash-integrations-view" id="dash-integrations-view" hidden>
+              <div class="integrations-shell">
+                <div class="widget-view-head">
+                  <div class="widget-view-copy">
+                    <div class="widget-view-kicker">Integrations</div>
+                    <div class="widget-view-title">Integrations & Tech</div>
+                    <div class="widget-view-subtitle">Connect marketing platforms and manage API credentials.</div>
+                  </div>
+                </div>
+                <div class="integrations-list" aria-label="Integrations tab preview">
+                  <div class="integration-row">
+                    <div class="integration-icon">
+                      <img src="https://storage.googleapis.com/vulive-v2.firebasestorage.app/businesses/dRRyYIfFUpGK2vEJ9yAw/assets/11b069b1-3d6b-4e14-904a-627eaffb7fcf.png" alt="Facebook Ads logo" loading="lazy">
+                    </div>
+                    <div class="integration-copy">
+                      <div class="integration-topline">
+                        <div class="integration-name">Facebook Ads</div>
+                        <span class="integration-badge on">Connected</span>
+                      </div>
+                      <div class="integration-desc">Track conversions and optimize Facebook campaigns with real-time lead data.</div>
+                    </div>
+                  </div>
+                  <div class="integration-row">
+                    <div class="integration-icon">
+                      <img src="https://storage.googleapis.com/vulive-v2.firebasestorage.app/businesses/dRRyYIfFUpGK2vEJ9yAw/assets/603fbcc6-e0b2-40b9-bbdd-dd78e8d21c78.jpg" alt="ActiveCampaign logo" loading="lazy">
+                    </div>
+                    <div class="integration-copy">
+                      <div class="integration-topline">
+                        <div class="integration-name">ActiveCampaign</div>
+                        <span class="integration-badge on">Connected</span>
+                      </div>
+                      <div class="integration-desc">Sync leads and automate email workflows with customer journey tracking.</div>
+                    </div>
+                  </div>
+                  <div class="integration-row">
+                    <div class="integration-icon">
+                      <img src="https://storage.googleapis.com/vulive-v2.firebasestorage.app/businesses/dRRyYIfFUpGK2vEJ9yAw/assets/991e964f-1be7-4002-90ee-f13dd9fcc699.png" alt="Google Ads logo" loading="lazy">
+                    </div>
+                    <div class="integration-copy">
+                      <div class="integration-topline">
+                        <div class="integration-name">Google Ads</div>
+                        <span class="integration-badge on">Connected</span>
+                      </div>
+                      <div class="integration-desc">Track conversions and optimize Google advertising campaigns with lead attribution.</div>
+                    </div>
+                  </div>
+                  <div class="integration-row">
+                    <div class="integration-icon">
+                      <img src="https://storage.googleapis.com/vulive-v2.firebasestorage.app/businesses/dRRyYIfFUpGK2vEJ9yAw/assets/66b23b55-4e00-4a99-827e-a9fddaa7ad62.png" alt="HubSpot logo" loading="lazy">
+                    </div>
+                    <div class="integration-copy">
+                      <div class="integration-topline">
+                        <div class="integration-name">HubSpot</div>
+                        <span class="integration-badge on">Connected</span>
+                      </div>
+                      <div class="integration-desc">Add and update contacts in HubSpot CRM with custom property mapping.</div>
+                    </div>
+                  </div>
+                  <div class="integration-row">
+                    <div class="integration-icon">
+                      <img src="https://storage.googleapis.com/vulive-v2.firebasestorage.app/businesses/dRRyYIfFUpGK2vEJ9yAw/assets/c61660f9-bab1-4c09-b75f-0888785658de.avif" alt="Jornaya logo" loading="lazy">
+                    </div>
+                    <div class="integration-copy">
+                      <div class="integration-topline">
+                        <div class="integration-name">Jornaya</div>
+                        <span class="integration-badge on">Connected</span>
+                      </div>
+                      <div class="integration-desc">Validate lead quality and compliance with real-time lead intelligence and verification.</div>
+                    </div>
+                  </div>
+                  <div class="integration-row">
+                    <div class="integration-icon">
+                      <img src="https://storage.googleapis.com/vulive-v2.firebasestorage.app/businesses/dRRyYIfFUpGK2vEJ9yAw/assets/8da09d98-bbcb-4047-be4a-1b84e7cdd748.jpg" alt="Nylas logo" loading="lazy">
+                    </div>
+                    <div class="integration-copy">
+                      <div class="integration-topline">
+                        <div class="integration-name">Nylas</div>
+                        <span class="integration-badge on">Connected</span>
+                      </div>
+                      <div class="integration-desc">Schedule meetings with Nylas calendar integration and booking availability checks.</div>
+                    </div>
+                  </div>
+                  <div class="integration-row">
+                    <div class="integration-icon">
+                      <img src="https://storage.googleapis.com/vulive-v2.firebasestorage.app/businesses/dRRyYIfFUpGK2vEJ9yAw/assets/c58b97c5-9021-4b4e-a19c-f436263f6757.png" alt="Stripe logo" loading="lazy">
+                    </div>
+                    <div class="integration-copy">
+                      <div class="integration-topline">
+                        <div class="integration-name">Stripe</div>
+                        <span class="integration-badge on">Connected</span>
+                      </div>
+                      <div class="integration-desc">Accept payments with Stripe Checkout and embed payment forms into flow steps.</div>
+                    </div>
+                  </div>
+                  <div class="integration-row">
+                    <div class="integration-icon">
+                      <img src="https://storage.googleapis.com/vulive-v2.firebasestorage.app/businesses/dRRyYIfFUpGK2vEJ9yAw/assets/47917b26-358e-4142-bff5-66334e1903a4.jpg" alt="Vidalytics logo" loading="lazy">
+                    </div>
+                    <div class="integration-copy">
+                      <div class="integration-topline">
+                        <div class="integration-name">Vidalytics</div>
+                        <span class="integration-badge on">Connected</span>
+                      </div>
+                      <div class="integration-desc">Embed video funnels and capture engagement signals directly inside your flow pages.</div>
+                    </div>
+                  </div>
+                  <div class="integration-row">
+                    <div class="integration-icon">
+                      <img src="https://storage.googleapis.com/vulive-v2.firebasestorage.app/businesses/dRRyYIfFUpGK2vEJ9yAw/assets/512773c8-36b3-45dd-8c78-031bba8cbfc4.png" alt="Calendly logo" loading="lazy">
+                    </div>
+                    <div class="integration-copy">
+                      <div class="integration-topline">
+                        <div class="integration-name">Calendly</div>
+                        <span class="integration-badge on">Connected</span>
+                      </div>
+                      <div class="integration-desc">Embed a Calendly scheduling widget in your AI-generated pages.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dash-analytics-view" id="dash-analytics-view" hidden>
+              <div class="analytics-shell">
+                <div class="analytics-head widget-view-head">
+                  <div class="widget-view-copy">
+                    <div class="analytics-eyebrow widget-view-kicker">Analytics</div>
+                    <div class="analytics-title widget-view-title">Performance Intelligence</div>
+                    <div class="analytics-subtitle widget-view-subtitle">Track flows, campaigns, and traffic sources in one cohort view.</div>
+                  </div>
+                </div>
+                <div class="analytics-panel">
+                  <div class="analytics-tabs">
+                    <span class="analytics-tab active">Overview</span>
+                    <span class="analytics-tab">Flows</span>
+                    <span class="analytics-tab">Goals</span>
+                    <span class="analytics-tab">Ad Campaigns</span>
+                    <span class="analytics-tab">Sources</span>
+                    <span class="analytics-tab">AI Reports</span>
+                  </div>
+                  <div class="analytics-cards">
+                    <div class="analytics-card">
+                      <div class="analytics-card-top">
+                        <div class="analytics-card-label">Total Revenue</div>
+                        <div class="analytics-card-change up">+12.4%</div>
+                      </div>
+                      <div class="analytics-card-value">$35K</div>
+                      <div class="analytics-spark up"></div>
+                      <div class="analytics-card-foot">$35K cohort revenue</div>
+                    </div>
+                    <div class="analytics-card">
+                      <div class="analytics-card-top">
+                        <div class="analytics-card-label">Media Spend</div>
+                        <div class="analytics-card-change down">-3.2%</div>
+                      </div>
+                      <div class="analytics-card-value">$19,200</div>
+                      <div class="analytics-spark down"></div>
+                      <div class="analytics-card-foot">Spend trend improving</div>
+                    </div>
+                    <div class="analytics-card">
+                      <div class="analytics-card-top">
+                        <div class="analytics-card-label">ROAS</div>
+                        <div class="analytics-card-change up">+18.2%</div>
+                      </div>
+                      <div class="analytics-card-value">1.8x</div>
+                      <div class="analytics-spark up"></div>
+                      <div class="analytics-card-foot">Cohort return compounding</div>
+                    </div>
+                    <div class="analytics-card">
+                      <div class="analytics-card-top">
+                        <div class="analytics-card-label">Total Leads</div>
+                        <div class="analytics-card-change up">+8.7%</div>
+                      </div>
+                      <div class="analytics-card-value">18</div>
+                      <div class="analytics-spark up"></div>
+                      <div class="analytics-card-foot">Lead volume trending up</div>
+                    </div>
+                    <div class="analytics-card">
+                      <div class="analytics-card-top">
+                        <div class="analytics-card-label">Booked Calls</div>
+                        <div class="analytics-card-change up">+22.1%</div>
+                      </div>
+                      <div class="analytics-card-value">127</div>
+                      <div class="analytics-spark up"></div>
+                      <div class="analytics-card-foot">Scheduler conversion rising</div>
+                    </div>
+                    <div class="analytics-card">
+                      <div class="analytics-card-top">
+                        <div class="analytics-card-label">Cost Per Lead</div>
+                        <div class="analytics-card-change down">-11.2%</div>
+                      </div>
+                      <div class="analytics-card-value">$22.48</div>
+                      <div class="analytics-spark down"></div>
+                      <div class="analytics-card-foot">Efficiency improving</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            <div class="dash-explainer" aria-live="polite">
+              <div class="dash-explainer-card">
+                <div class="dash-explainer-kicker" id="dash-explainer-kicker">Dashboard</div>
+                <div class="dash-explainer-title" id="dash-explainer-title">Operate your entire growth system from one command center.</div>
+                <p class="dash-explainer-copy" id="dash-explainer-summary">FlowOS consolidates funnels, attribution, lead intelligence, and execution into one operating layer so your team can move with clarity instead of switching between disconnected tools.</p>
+                <p class="dash-explainer-detail" id="dash-explainer-detail">In Dashboard view, you can monitor flow health, conversion momentum, and revenue signals at a glance before deciding what to optimize next.</p>
+                <div class="dash-explainer-label">What you can do</div>
+                <ul class="dash-explainer-list" id="dash-explainer-list">
+                  <li>See performance, flow activity, and attributed revenue in one place.</li>
+                  <li>Spot bottlenecks and compounding campaigns before they impact growth.</li>
+                  <li>Give operators and founders one shared view of what is working.</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -1453,21 +3469,27 @@ footer {
     <div class="problem-grid">
       <div>
         <div class="problem-label">The Problem</div>
-        <h2>You're paying for 30 tools. You're getting zero clarity.</h2>
+        <h2>You're paying for 30 tools.<br>You're getting zero clarity.</h2>
         <p>The average marketing team manages 30+ logins, 5 dashboards, and $200K+ in annual tool spend — and still can't answer the question: "What's actually working?" Meanwhile, every platform owns a slice of your data, and none of them talk to each other. FlowOS ends this.</p>
       </div>
       <div class="problem-stats">
-        <div class="problem-stat-card">
+        <div class="problem-stat-card primary">
           <div class="problem-stat-num red">30+</div>
-          <div class="problem-stat-text"><strong>Disconnected tools</strong> in the average marketing stack, each with its own login, data, and billing.</div>
+          <div class="problem-stat-copy">
+            <div class="problem-stat-text"><strong>Disconnected tools</strong> in the average marketing stack, each with its own login, data, and billing.</div>
+          </div>
         </div>
-        <div class="problem-stat-card">
+        <div class="problem-stat-card secondary">
           <div class="problem-stat-num orange">5</div>
-          <div class="problem-stat-text"><strong>Different dashboards</strong> telling five different stories, none of them complete.</div>
+          <div class="problem-stat-copy">
+            <div class="problem-stat-text"><strong>Different dashboards</strong> telling five different stories, none of them complete.</div>
+          </div>
         </div>
-        <div class="problem-stat-card">
+        <div class="problem-stat-card tertiary">
           <div class="problem-stat-num grey">$200K+</div>
-          <div class="problem-stat-text"><strong>Annual tool spend</strong> — and still can't answer "What's actually working?"</div>
+          <div class="problem-stat-copy">
+            <div class="problem-stat-text"><strong>Annual tool spend</strong> and still no clear answer to what is actually working.</div>
+          </div>
         </div>
       </div>
     </div>
@@ -1495,8 +3517,13 @@ footer {
         </ul>
       </div>
       <div class="compare-card new">
-        <div class="compare-badge">FlowOS</div>
-        <h3>Adaptive Flows</h3>
+        <div class="compare-badge">
+          The
+          <img src="https://storage.googleapis.com/vulive-v2.firebasestorage.app/businesses/dRRyYIfFUpGK2vEJ9yAw/assets/7ad1ce0e-7625-425b-a71e-6a075762f2c2.png" class="compare-badge-logo" alt="FlowOS logo">
+          Way
+        </div>
+        <h3>Adaptive Marketing Flows</h3>
+        <p class="compare-new-lead">Keep every lead in motion with AI-driven paths that adapt in real time based on behavior, intent, and source. This is the Adaptive Marketing OS in action: always optimizing, always learning, and always moving users toward the next best step.</p>
         <ul class="compare-list">
           <li><span class="compare-icon">✓</span>Continuous journeys that adapt in real time</li>
           <li><span class="compare-icon">✓</span>Every user gets a unique path based on behavior and intent</li>
@@ -1518,33 +3545,83 @@ footer {
       <p>Five integrated systems working as one. Build once, optimize forever.</p>
     </div>
     <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-num">01</div>
+      <div class="feature-card feature-flow">
+        <div class="feature-card-top">
+          <div class="feature-icon-wrap" aria-hidden="true">
+            <svg class="feature-icon icon-flow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="7" cy="6" r="2"></circle>
+              <circle cx="7" cy="18" r="2"></circle>
+              <circle cx="17" cy="12" r="2"></circle>
+              <path d="M9 6h3a3 3 0 0 1 3 3v0"></path>
+              <path d="M9 18h3a3 3 0 0 0 3-3v0"></path>
+            </svg>
+          </div>
+        </div>
         <h3>Card-Based Flow Builder</h3>
         <p>Drag a card. Drop a decision. Deploy an entire journey. Every card learns from real behavior and adapts the path forward — no code, no guesswork.</p>
       </div>
-      <div class="feature-card">
-        <div class="feature-num">02</div>
+      <div class="feature-card feature-ai">
+        <div class="feature-card-top">
+          <div class="feature-icon-wrap" aria-hidden="true">
+            <svg class="feature-icon icon-ai" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 4.8 14 8l3.7.8-2.5 2.7.4 3.7-3.6-1.6-3.6 1.6.4-3.7-2.5-2.7L10 8l2-3.2Z"></path>
+            </svg>
+          </div>
+        </div>
         <h3>AI Decision Layer</h3>
         <p>The brain behind every flow. AI analyzes behavior, scores intent, and routes each user to the highest-converting path — in milliseconds.</p>
       </div>
-      <div class="feature-card">
-        <div class="feature-num">03</div>
+      <div class="feature-card feature-profile">
+        <div class="feature-card-top">
+          <div class="feature-icon-wrap" aria-hidden="true">
+            <svg class="feature-icon icon-profile" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8.5" r="2.5"></circle>
+              <path d="M7.5 17c1.2-2.2 2.8-3.3 4.5-3.3s3.3 1.1 4.5 3.3"></path>
+              <circle class="muted" cx="12" cy="12" r="8"></circle>
+            </svg>
+          </div>
+        </div>
         <h3>Persistent Profiles</h3>
         <p>A visitor from six months ago returns. FlowOS remembers everything — every page, every click, every hesitation. The journey picks up exactly where it left off.</p>
       </div>
-      <div class="feature-card">
-        <div class="feature-num">04</div>
+      <div class="feature-card feature-logic">
+        <div class="feature-card-top">
+          <div class="feature-icon-wrap" aria-hidden="true">
+            <svg class="feature-icon icon-logic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 6v12"></path>
+              <path d="M6 12h7"></path>
+              <path d="M13 12 18 7"></path>
+              <path d="M13 12 18 17"></path>
+            </svg>
+          </div>
+        </div>
         <h3>Behavioral Logic Engine</h3>
         <p>Your flows aren't static. When users behave differently than expected, the system adapts in real time. No manual optimization. No waiting for test results.</p>
       </div>
-      <div class="feature-card">
-        <div class="feature-num">05</div>
+      <div class="feature-card feature-data">
+        <div class="feature-card-top">
+          <div class="feature-icon-wrap" aria-hidden="true">
+            <svg class="feature-icon icon-data" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <ellipse cx="12" cy="6.5" rx="5" ry="2.3"></ellipse>
+              <path d="M7 6.5v5c0 1.3 2.2 2.3 5 2.3s5-1 5-2.3v-5"></path>
+              <path d="M7 11.5v5c0 1.3 2.2 2.3 5 2.3s5-1 5-2.3v-5"></path>
+            </svg>
+          </div>
+        </div>
         <h3>Unified Data Control</h3>
         <p>Every channel. Every campaign. Every touchpoint. One source of truth that you own — not Salesforce, not HubSpot, not Google. You.</p>
       </div>
-      <div class="feature-card">
-        <div class="feature-num">06</div>
+      <div class="feature-card feature-pages">
+        <div class="feature-card-top">
+          <div class="feature-icon-wrap" aria-hidden="true">
+            <svg class="feature-icon icon-pages" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="6" width="14" height="12" rx="2.6"></rect>
+              <path d="M5 9.5h14"></path>
+              <path d="M8 13h4"></path>
+              <path d="M8 16h7"></path>
+            </svg>
+          </div>
+        </div>
         <h3>Adaptive Pages</h3>
         <p>The same URL serves a different page to every visitor. Headlines shift. Offers change. CTAs adapt. All based on who's looking — automatically.</p>
       </div>
@@ -1558,7 +3635,7 @@ footer {
     <div class="big-feature-inner">
       <div>
         <div class="section-label">Mission Control</div>
-        <h2>Your entire marketing universe, <em>in one view</em></h2>
+        <h2>Your entire marketing universe,<em>in one view</em></h2>
         <p>Every journey. Every user. Every decision. One unified control center — no tracking scripts, no spreadsheets, no duct tape.</p>
         <ul class="feature-checklist">
           <li><span class="check-icon">✓</span>Real-time flow visualization</li>
@@ -1571,7 +3648,13 @@ footer {
       <div class="big-feature-visual">
         <div class="mini-flow">
           <div class="flow-card">
-            <div class="flow-card-icon blue">🎯</div>
+            <div class="flow-card-icon green" aria-hidden="true">
+              <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3.5" y="3.5" width="11" height="11" rx="2.5"></rect>
+                <path d="M6.5 7.2h5"></path>
+                <path d="M6.5 10.8h3.2"></path>
+              </svg>
+            </div>
             <div class="flow-card-text">
               <div class="flow-card-title">New Visitor Entry</div>
               <div class="flow-card-desc">Traffic source detected → Route to intent analysis</div>
@@ -1580,7 +3663,13 @@ footer {
           </div>
           <div class="flow-connector"><div class="flow-connector-line"></div></div>
           <div class="flow-card">
-            <div class="flow-card-icon green">🧠</div>
+            <div class="flow-card-icon blue" aria-hidden="true">
+              <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="9" r="5.2"></circle>
+                <path d="M9 6.6v4.8"></path>
+                <path d="M6.6 9h4.8"></path>
+              </svg>
+            </div>
             <div class="flow-card-text">
               <div class="flow-card-title">AI Decision Node</div>
               <div class="flow-card-desc">Analyzing behavior patterns → Routing to best path</div>
@@ -1589,7 +3678,13 @@ footer {
           </div>
           <div class="flow-connector"><div class="flow-connector-line"></div></div>
           <div class="flow-card">
-            <div class="flow-card-icon orange">⚡</div>
+            <div class="flow-card-icon orange" aria-hidden="true">
+              <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 3.8v10.4"></path>
+                <path d="M5.4 7.4 9 3.8l3.6 3.6"></path>
+                <path d="M5.4 10.6 9 14.2l3.6-3.6"></path>
+              </svg>
+            </div>
             <div class="flow-card-text">
               <div class="flow-card-title">Dynamic Content Swap</div>
               <div class="flow-card-desc">Personalized offer → Headline + CTA adapted</div>
@@ -1598,7 +3693,14 @@ footer {
           </div>
           <div class="flow-connector"><div class="flow-connector-line"></div></div>
           <div class="flow-card">
-            <div class="flow-card-icon blue">📊</div>
+            <div class="flow-card-icon blue" aria-hidden="true">
+              <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3.5 14.5h11"></path>
+                <path d="M5.2 11.5V9.2"></path>
+                <path d="M9 11.5V7"></path>
+                <path d="M12.8 11.5V5"></path>
+              </svg>
+            </div>
             <div class="flow-card-text">
               <div class="flow-card-title">Conversion & Re-engagement</div>
               <div class="flow-card-desc">Journey continues → Persistent profile updated</div>
@@ -1709,7 +3811,7 @@ footer {
           <li><span class="pricing-check">✓</span> 5 team members</li>
           <li><span class="pricing-check">✓</span> Priority support</li>
         </ul>
-        <a href="#cta" class="btn-primary-lg" style="text-decoration:none;color:inherit;display:flex;align-items:center;justify-content:center;gap:8px;">Apply for Early Access</a>
+        <a href="#cta" class="btn-primary-lg" style="text-decoration:none;color:#fff;display:flex;align-items:center;justify-content:center;gap:8px;">Apply for Early Access</a>
       </div>
       <div class="pricing-card">
         <div class="pricing-name">Enterprise</div>
@@ -1735,12 +3837,12 @@ footer {
 <section class="invite-section reveal" id="cta">
   <div class="container">
     <div class="invite-inner">
+      <h2>Your marketing stack shouldn't need a stack.</h2>
+      <p class="invite-sub">Apply for early access. Limited spots for founding partners who want to build the future of adaptive marketing.</p>
       <div class="invite-badge">
         <span class="invite-badge-dot"></span>
         Founding Partner Program
       </div>
-      <h2>Your marketing stack shouldn't need a stack.</h2>
-      <p class="invite-sub">Apply for early access. Limited spots for founding partners who want to build the future of adaptive marketing.</p>
       <div class="invite-spots">
         <strong>14</strong> spots remaining
       </div>
@@ -1773,25 +3875,24 @@ footer {
     <div class="footer-grid">
       <div>
         <a href="/" class="nav-logo">
-          <div class="nav-logo-icon">F</div>
-          FlowOS
+          <img src="https://storage.googleapis.com/vulive-v2.firebasestorage.app/businesses/dRRyYIfFUpGK2vEJ9yAw/assets/a51134b0-8471-4a31-8fa7-adc014a776f0.png" class="nav-logo-image" alt="FlowOS logo">
         </a>
         <p class="footer-brand-desc">The adaptive marketing OS. Replace your entire stack with one intelligent platform that learns and evolves.</p>
       </div>
       <div class="footer-col">
         <h4>Product</h4>
         <ul class="footer-links">
-          <li><a href="#features">Features</a></li>
+          <li><a href="#widget-preview">Features</a></li>
+          <li><a href="#how-it-works">What Is a Flow?</a></li>
+          <li><a href="#features">Platform</a></li>
           <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#how-it-works">How It Works</a></li>
-          <li><a href="#cta">Get Started</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
         <ul class="footer-links">
-          <li><a href="#cta">Apply</a></li>
-          <li><a href="#cta">Contact</a></li>
+          <li><a href="#cta">Apply for Early Access</a></li>
+          <li><a href="#cta">Contact Us</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -1856,39 +3957,551 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Animate chart bars on load
-window.addEventListener('load', () => {
-  const bars = document.querySelectorAll('.chart-bar');
-  bars.forEach((bar, i) => {
-    const h = bar.style.height;
-    bar.style.height = '0%';
-    bar.style.transition = `height 0.6s ${i * 0.03}s cubic-bezier(0.4, 0, 0.2, 1)`;
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        bar.style.height = h;
-      });
-    });
-  });
-});
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// Count-up animation for dashboard stat
-const statValue = document.querySelector('.stat-card .stat-value');
-if (statValue && statValue.textContent === '847') {
-  let count = 0;
-  const target = 847;
-  const duration = 2000;
-  const start = performance.now();
-  function update(timestamp) {
-    const elapsed = timestamp - start;
-    const progress = Math.min(elapsed / duration, 1);
-    count = Math.floor(progress * target);
-    statValue.textContent = count.toLocaleString();
-    if (progress < 1) requestAnimationFrame(update);
+function formatStatValue(value, format) {
+  switch (format) {
+    case 'compact':
+      return new Intl.NumberFormat('en-US', {
+        notation: 'compact',
+        maximumFractionDigits: 1
+      }).format(value);
+    case 'percent':
+      return `${Math.round(value)}%`;
+    case 'currency-compact':
+      return `$${new Intl.NumberFormat('en-US', {
+        notation: 'compact',
+        maximumFractionDigits: 1
+      }).format(value)}`;
+    default:
+      return Math.round(value).toLocaleString('en-US');
   }
+}
+
+function animateStatValue(stat, target, format, duration = 900) {
+  const startValue = Number(stat.dataset.currentValue || 0);
+
+  if (prefersReducedMotion) {
+    stat.textContent = formatStatValue(target, format);
+    stat.dataset.currentValue = String(target);
+    return;
+  }
+
+  const startTime = performance.now();
+
+  function update(timestamp) {
+    const progress = Math.min((timestamp - startTime) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const value = startValue + (target - startValue) * eased;
+    stat.textContent = formatStatValue(value, format);
+
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    } else {
+      stat.textContent = formatStatValue(target, format);
+      stat.dataset.currentValue = String(target);
+    }
+  }
+
   requestAnimationFrame(update);
 }
 
+const dashboardViews = {
+  dashboard: {
+    chartTitle: 'Flow Performance',
+    explainer: {
+      eyebrow: 'Dashboard',
+      title: 'Operate growth from one command center.',
+      summary: 'Bring flows, lead signals, and performance data into one operating view.',
+      detail: 'In Dashboard, you can spot momentum, bottlenecks, and what needs attention next.',
+      points: [
+        'See performance and revenue in one place.',
+        'Spot issues and winning campaigns faster.'
+      ]
+    },
+    stats: [
+      { label: 'AI Flows', value: 847, format: 'number', change: '↑ 12.4%', trend: 'up' },
+      { label: 'Active Journeys', value: 12400, format: 'compact', change: '↑ 8.2%', trend: 'up' },
+      { label: 'Conv. Rate', value: 34, format: 'percent', change: '↑ 5.1%', trend: 'up' },
+      { label: 'Revenue Attr.', value: 1200000, format: 'currency-compact', change: '↑ 22.6%', trend: 'up' }
+    ],
+    bars: [30, 45, 35, 60, 50, 42, 65, 55, 70, 48, 58, 72, 62, 75, 68, 82, 78, 85, 72, 88, 80, 92, 85, 95]
+  },
+  flows: {
+    chartTitle: 'Flow Velocity',
+    explainer: {
+      eyebrow: 'Flows',
+      title: 'Build adaptive journeys visually.',
+      summary: 'Map pages, branches, booking paths, and nurture logic in one builder.',
+      detail: 'In Flows, you can see how leads move from capture to qualification, booking, or nurture at a glance.',
+      points: [
+        'See your full marketing ecosystem and flow paths in one view',
+        'Use conditional logic and AI-powered features to optimize lead routing'
+      ]
+    },
+    stats: [
+      { label: 'Live Flows', value: 892, format: 'number', change: '↑ 9.8%', trend: 'up' },
+      { label: 'Decision Nodes', value: 286, format: 'number', change: '↑ 14.2%', trend: 'up' },
+      { label: 'Completion Rate', value: 41, format: 'percent', change: '↑ 6.4%', trend: 'up' },
+      { label: 'Recovered Leads', value: 1840, format: 'compact', change: '↑ 18.1%', trend: 'up' }
+    ],
+    bars: [24, 28, 34, 38, 41, 48, 46, 54, 57, 60, 58, 65, 69, 72, 76, 74, 81, 85, 83, 88, 86, 91, 89, 94]
+  },
+  profiles: {
+    chartTitle: 'Profile Enrichment',
+    explainer: {
+      eyebrow: 'Profiles',
+      title: 'Understand every lead in context.',
+      summary: 'Turn raw contacts into usable profiles with source, behavior, and intent data.',
+      detail: 'In Profiles, you can review lead quality, segment by intent, and see who is moving closer to conversion.',
+      points: [
+        'Track source, engagement, and status together.',
+        'Prioritize the hottest contacts faster.'
+      ]
+    },
+    stats: [
+      { label: 'Tracked Profiles', value: 18600, format: 'compact', change: '↑ 11.7%', trend: 'up' },
+      { label: 'Intent Matches', value: 92, format: 'percent', change: '↑ 3.4%', trend: 'up' },
+      { label: 'Returning Users', value: 6800, format: 'compact', change: '↑ 7.9%', trend: 'up' },
+      { label: 'Signal Depth', value: 14, format: 'number', change: '↑ 2.1%', trend: 'up' }
+    ],
+    bars: [18, 22, 25, 31, 35, 39, 44, 49, 55, 58, 62, 68, 70, 74, 77, 81, 79, 84, 88, 86, 90, 93, 91, 96]
+  },
+  integrations: {
+    chartTitle: 'Campaign Lift',
+    explainer: {
+      eyebrow: 'Integrations',
+      title: 'Connect your stack in one place.',
+      summary: 'Coordinate ads, CRM, calendars, payments, and enrichment from one layer.',
+      detail: 'In Integrations, you can connect tools and make each flow step trigger the next action automatically.',
+      points: [
+        'Unify the tools you already use.',
+        'Reduce breakage between disconnected automations.'
+      ]
+    },
+    stats: [
+      { label: 'Active Campaigns', value: 48, format: 'number', change: '↑ 4.9%', trend: 'up' },
+      { label: 'Channel Mix', value: 5, format: 'number', change: '→ Stable', trend: 'up' },
+      { label: 'CTR Lift', value: 27, format: 'percent', change: '↑ 8.7%', trend: 'up' },
+      { label: 'Spend Efficiency', value: 73, format: 'percent', change: '↑ 5.6%', trend: 'up' }
+    ],
+    bars: [26, 34, 29, 43, 38, 46, 42, 51, 48, 56, 52, 61, 58, 66, 62, 71, 69, 76, 73, 81, 79, 85, 82, 89]
+  },
+  analytics: {
+    chartTitle: 'Attribution Coverage',
+    explainer: {
+      eyebrow: 'Analytics',
+      title: 'Turn attribution into clear decisions.',
+      summary: 'Tie together spend, leads, bookings, and revenue in one reporting view.',
+      detail: 'In Analytics, you can compare outcomes, track efficiency, and see which sources are driving the strongest return.',
+      points: [
+        'See revenue, spend, and CPL together.',
+        'Find the sources and journeys worth scaling.'
+      ]
+    },
+    stats: [
+      { label: 'Coverage', value: 94, format: 'percent', change: '↑ 4.1%', trend: 'up' },
+      { label: 'Tracked Revenue', value: 1800000, format: 'currency-compact', change: '↑ 16.8%', trend: 'up' },
+      { label: 'Insights Surfaced', value: 312, format: 'number', change: '↑ 10.3%', trend: 'up' },
+      { label: 'Leak Alerts', value: 17, format: 'number', change: '↓ 12.0%', trend: 'down' }
+    ],
+    bars: [40, 44, 47, 52, 55, 57, 61, 64, 67, 69, 71, 73, 76, 79, 82, 84, 86, 89, 88, 91, 93, 92, 95, 97]
+  }
+};
+
+const heroDashboard = document.getElementById('hero-dashboard');
+const heroNavItems = Array.from(document.querySelectorAll('.dash-nav-item[data-view]'));
+const heroDefaultView = document.getElementById('dash-default-view');
+const heroFlowsView = document.getElementById('dash-flows-view');
+const heroProfilesView = document.getElementById('dash-profiles-view');
+const heroIntegrationsView = document.getElementById('dash-integrations-view');
+const heroAnalyticsView = document.getElementById('dash-analytics-view');
+const heroExplainerKicker = document.getElementById('dash-explainer-kicker');
+const heroExplainerTitle = document.getElementById('dash-explainer-title');
+const heroExplainerSummary = document.getElementById('dash-explainer-summary');
+const heroExplainerDetail = document.getElementById('dash-explainer-detail');
+const heroExplainerList = document.getElementById('dash-explainer-list');
+const heroExplainerPanel = document.querySelector('.dash-explainer');
+const heroChartTabs = Array.from(document.querySelectorAll('.chart-tab[data-range]'));
+const heroChartArea = document.getElementById('dash-chart-area');
+const flowboardCanvas = document.querySelector('.flowboard-canvas');
+const flowboardHint = document.querySelector('.flowboard-hint');
+const heroStatCards = Array.from(document.querySelectorAll('.dash-stats .stat-card'));
+let heroChartBars = Array.from(document.querySelectorAll('.chart-bar'));
+const heroChartTitle = document.getElementById('dash-chart-title');
+let activeDashboardRange = '30d';
+let activeDashboardView = 'dashboard';
+
+if (heroChartArea) {
+  const tooltip = document.createElement('div');
+  tooltip.className = 'chart-tooltip';
+  tooltip.id = 'chart-tooltip';
+  heroChartArea.appendChild(tooltip);
+}
+
+const heroChartTooltip = document.getElementById('chart-tooltip');
+
+function buildVisitorSeries(days, { base, wave, growth, weekendDrop = 14, weekdayLift = 12 }) {
+  const today = new Date();
+  const counts = Array.from({ length: days }, (_, index) => {
+    const curve = Math.sin(index / 2.8) * wave + Math.cos(index / 6.2) * (wave * 0.55);
+    const trend = index * growth;
+    const dayOfWeek = new Date(today.getFullYear(), today.getMonth(), today.getDate() - (days - 1 - index)).getDay();
+    const weekdayAdjustment = dayOfWeek === 0 || dayOfWeek === 6
+      ? -weekendDrop
+      : dayOfWeek === 2 || dayOfWeek === 3
+        ? weekdayLift
+        : 0;
+    return Math.max(Math.round(base + curve + trend + weekdayAdjustment), Math.round(base * 0.55));
+  });
+
+  const peak = Math.max(...counts);
+  return counts.map((visitors, index) => {
+    const date = new Date(today.getFullYear(), today.getMonth(), today.getDate() - (days - 1 - index));
+    return {
+      visitors,
+      label: new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric' }).format(date),
+      height: Math.max(10, Math.round((visitors / peak) * 100))
+    };
+  });
+}
+
+const dashboardChartRanges = {
+  '7d': buildVisitorSeries(7, { base: 182, wave: 32, growth: 2.6 }),
+  '30d': buildVisitorSeries(30, { base: 156, wave: 28, growth: 1.35 }),
+  '90d': buildVisitorSeries(90, { base: 122, wave: 22, growth: 0.78, weekendDrop: 10, weekdayLift: 8 })
+};
+
+function getChartGapForRange(range) {
+  switch (range) {
+    case '7d':
+      return '8px';
+    case '90d':
+      return '1.5px';
+    default:
+      return '4px';
+  }
+}
+
+function setChartTooltip(bar) {
+  if (!heroChartArea || !heroChartTooltip || !bar) return;
+  const { label, visitors } = bar.dataset;
+  heroChartTooltip.textContent = `${label}: ${Number(visitors).toLocaleString('en-US')} visitors`;
+  const areaRect = heroChartArea.getBoundingClientRect();
+  const barRect = bar.getBoundingClientRect();
+  const left = barRect.left - areaRect.left + (barRect.width / 2);
+  const top = Math.max(barRect.top - areaRect.top - 10, 8);
+  heroChartTooltip.style.left = `${left}px`;
+  heroChartTooltip.style.top = `${top}px`;
+  heroChartTooltip.classList.add('is-visible');
+}
+
+function hideChartTooltip() {
+  heroChartTooltip?.classList.remove('is-visible');
+}
+
+function updateStatCard(card, statData) {
+  const label = card.querySelector('.stat-label');
+  const value = card.querySelector('.stat-value');
+  const change = card.querySelector('.stat-change');
+
+  if (!label || !value || !change) return;
+
+  label.textContent = statData.label;
+  value.dataset.format = statData.format;
+  value.dataset.target = String(statData.value);
+  change.textContent = statData.change;
+  change.classList.toggle('up', statData.trend !== 'down');
+  change.classList.toggle('down', statData.trend === 'down');
+
+  animateStatValue(value, statData.value, statData.format);
+}
+
+function updateChartBars(points, animate = true, range = activeDashboardRange) {
+  if (!heroChartArea) return;
+
+  hideChartTooltip();
+  heroChartBars.forEach((bar) => bar.remove());
+
+  heroChartArea.style.setProperty('--chart-gap', getChartGapForRange(range));
+
+  points.forEach((point, index) => {
+    const bar = document.createElement('button');
+    bar.type = 'button';
+    bar.className = 'chart-bar';
+    bar.dataset.label = point.label;
+    bar.dataset.visitors = String(point.visitors);
+    bar.setAttribute('aria-label', `${point.label}: ${point.visitors.toLocaleString('en-US')} visitors`);
+    bar.style.setProperty('--bar-index', index);
+    bar.style.transition = animate && !prefersReducedMotion
+      ? `height 520ms ${index * 0.02}s cubic-bezier(0.4, 0, 0.2, 1), opacity 220ms ease`
+      : 'none';
+    bar.style.height = `${point.height ?? 0}%`;
+    heroChartArea.appendChild(bar);
+  });
+
+  heroChartBars = Array.from(heroChartArea.querySelectorAll('.chart-bar'));
+}
+
+function updateHeroExplainer(viewName) {
+  const explainer = dashboardViews[viewName]?.explainer;
+
+  if (!explainer || !heroExplainerKicker || !heroExplainerTitle || !heroExplainerSummary || !heroExplainerDetail || !heroExplainerList) {
+    return;
+  }
+
+  heroExplainerKicker.textContent = explainer.eyebrow;
+  heroExplainerTitle.textContent = explainer.title;
+  heroExplainerSummary.textContent = explainer.summary;
+  heroExplainerDetail.textContent = explainer.detail;
+
+  heroExplainerList.replaceChildren(
+    ...explainer.points.map((point) => {
+      const item = document.createElement('li');
+      item.textContent = point;
+      return item;
+    })
+  );
+}
+
+function setDashboardView(viewName, animate = true) {
+  const view = dashboardViews[viewName];
+  if (!view) return;
+  activeDashboardView = viewName;
+
+  const isFlowsView = viewName === 'flows';
+  const isProfilesView = viewName === 'profiles';
+  const isIntegrationsView = viewName === 'integrations';
+  const isAnalyticsView = viewName === 'analytics';
+
+  heroNavItems.forEach((item) => {
+    const isActive = item.dataset.view === viewName;
+    item.classList.toggle('active', isActive);
+    item.setAttribute('aria-pressed', String(isActive));
+  });
+
+  if (heroDefaultView) {
+    heroDefaultView.hidden = isFlowsView || isProfilesView || isIntegrationsView || isAnalyticsView;
+  }
+
+  if (heroFlowsView) {
+    heroFlowsView.hidden = !isFlowsView;
+  }
+
+  if (heroProfilesView) {
+    heroProfilesView.hidden = !isProfilesView;
+  }
+
+  if (heroIntegrationsView) {
+    heroIntegrationsView.hidden = !isIntegrationsView;
+  }
+
+  if (heroAnalyticsView) {
+    heroAnalyticsView.hidden = !isAnalyticsView;
+  }
+
+  updateHeroExplainer(viewName);
+
+  if (isFlowsView) {
+    if (flowboardCanvas) {
+      flowboardCanvas.scrollLeft = 0;
+      flowboardCanvas.scrollTop = 0;
+    }
+    return;
+  }
+
+  if (isProfilesView) {
+    return;
+  }
+
+  if (isIntegrationsView) {
+    return;
+  }
+
+  if (isAnalyticsView) {
+    return;
+  }
+
+  if (heroChartTitle) {
+    heroChartTitle.textContent = view.chartTitle;
+  }
+
+  heroStatCards.forEach((card, index) => {
+    if (view.stats[index]) {
+      updateStatCard(card, view.stats[index]);
+    }
+  });
+
+  const chartPoints = viewName === 'dashboard'
+    ? dashboardChartRanges[activeDashboardRange]
+    : view.bars.map((height, index) => ({
+        label: `Day ${index + 1}`,
+        visitors: Math.round(height * 12.5),
+        height
+      }));
+
+  updateChartBars(chartPoints, animate, viewName === 'dashboard' ? activeDashboardRange : '30d');
+}
+
+function setDashboardRange(range, animate = true) {
+  if (!dashboardChartRanges[range]) return;
+  activeDashboardRange = range;
+
+  heroChartTabs.forEach((tab) => {
+    const isActive = tab.dataset.range === range;
+    tab.classList.toggle('active', isActive);
+    tab.setAttribute('aria-pressed', String(isActive));
+  });
+
+  if (activeDashboardView === 'dashboard') {
+    updateChartBars(dashboardChartRanges[range], animate, range);
+  }
+}
+
+if (heroDashboard && heroNavItems.length && heroStatCards.length && heroChartBars.length) {
+  heroChartBars.forEach((bar) => {
+    bar.style.height = '0%';
+  });
+
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      setDashboardView('dashboard', true);
+    });
+  });
+
+  heroNavItems.forEach((item) => {
+    item.addEventListener('click', () => {
+      setDashboardView(item.dataset.view, true);
+    });
+  });
+
+  heroChartTabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      setDashboardRange(tab.dataset.range || '30d', true);
+    });
+  });
+}
+
+if (heroChartArea) {
+  heroChartArea.addEventListener('pointermove', (event) => {
+    const bar = event.target.closest('.chart-bar');
+    if (!bar) {
+      hideChartTooltip();
+      return;
+    }
+    setChartTooltip(bar);
+  });
+
+  heroChartArea.addEventListener('pointerleave', hideChartTooltip);
+  heroChartArea.addEventListener('focusin', (event) => {
+    const bar = event.target.closest('.chart-bar');
+    if (bar) setChartTooltip(bar);
+  });
+  heroChartArea.addEventListener('focusout', hideChartTooltip);
+}
+
+// Drag to scroll for the flowboard canvas
+if (flowboardCanvas && window.matchMedia('(pointer: fine)').matches) {
+  let isDragging = false;
+  let startX = 0;
+  let startY = 0;
+  let startScrollLeft = 0;
+  let startScrollTop = 0;
+
+  const stopDragging = () => {
+    isDragging = false;
+    flowboardCanvas.classList.remove('is-dragging');
+  };
+
+  flowboardCanvas.addEventListener('pointerdown', (event) => {
+    if (event.pointerType === 'touch') return;
+    isDragging = true;
+    startX = event.clientX;
+    startY = event.clientY;
+    startScrollLeft = flowboardCanvas.scrollLeft;
+    startScrollTop = flowboardCanvas.scrollTop;
+    flowboardCanvas.classList.add('is-dragging');
+    flowboardCanvas.setPointerCapture(event.pointerId);
+    event.preventDefault();
+    event.stopPropagation();
+  });
+
+  flowboardCanvas.addEventListener('pointermove', (event) => {
+    if (!isDragging) return;
+    const deltaX = event.clientX - startX;
+    const deltaY = event.clientY - startY;
+    flowboardCanvas.scrollLeft = startScrollLeft - deltaX;
+    flowboardCanvas.scrollTop = startScrollTop - deltaY;
+    event.preventDefault();
+    event.stopPropagation();
+  });
+
+  flowboardCanvas.addEventListener('pointerup', stopDragging);
+  flowboardCanvas.addEventListener('pointercancel', stopDragging);
+  flowboardCanvas.addEventListener('lostpointercapture', stopDragging);
+}
+
+if (flowboardCanvas && flowboardHint) {
+  const dismissFlowboardHint = () => {
+    if (flowboardCanvas.scrollLeft > 2 || flowboardCanvas.scrollTop > 2) {
+      flowboardHint.classList.add('is-hidden');
+      flowboardCanvas.removeEventListener('scroll', dismissFlowboardHint);
+    }
+  };
+
+  flowboardCanvas.addEventListener('scroll', dismissFlowboardHint, { passive: true });
+}
+
+// Add subtle pointer-reactive depth to the hero dashboard
+const canUsePointerDepth = window.matchMedia('(pointer: fine)').matches && !prefersReducedMotion;
+
+if (heroDashboard && canUsePointerDepth) {
+  heroDashboard.classList.add('is-interactive');
+
+  const resetDashboard = () => {
+    heroDashboard.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    heroDashboard.style.setProperty('--glow-x', '50%');
+    heroDashboard.style.setProperty('--glow-y', '12%');
+    heroDashboard.style.setProperty('--glow-opacity', '0');
+  };
+
+  heroDashboard.addEventListener('pointermove', (event) => {
+    if (flowboardCanvas?.classList.contains('is-dragging')) {
+      return;
+    }
+    if (heroExplainerPanel?.contains(event.target)) {
+      resetDashboard();
+      return;
+    }
+    const rect = heroDashboard.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width;
+    const y = (event.clientY - rect.top) / rect.height;
+    const rotateY = (x - 0.5) * 4;
+    const rotateX = (0.5 - y) * 3.5;
+
+    heroDashboard.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    heroDashboard.style.setProperty('--glow-x', `${x * 100}%`);
+    heroDashboard.style.setProperty('--glow-y', `${y * 100}%`);
+    heroDashboard.style.setProperty('--glow-opacity', '0.35');
+  });
+
+  heroDashboard.addEventListener('pointerleave', resetDashboard);
+  resetDashboard();
+}
+
 // Invitation form submit (placeholder — wire to your backend)
+const inviteRoleSelect = document.querySelector('.invite-form select[name="role"]');
+
+function syncInviteRoleSelect() {
+  if (!inviteRoleSelect) return;
+  inviteRoleSelect.classList.toggle('has-value', inviteRoleSelect.value !== '');
+}
+
+if (inviteRoleSelect) {
+  syncInviteRoleSelect();
+  inviteRoleSelect.addEventListener('change', syncInviteRoleSelect);
+}
+
 document.getElementById('invite-form')?.addEventListener('submit', function(e) {
   e.preventDefault();
   const btn = document.getElementById('invite-submit');

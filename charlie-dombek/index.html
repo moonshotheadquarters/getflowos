@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charlie Dombek | CPA, MBA — Wealth Architect & Founder of Axium Wealth</title>
+    <meta name="description" content="Charlie Dombek is a CPA, MBA, and wealth architect with 30+ years of experience. Founder of Axium Wealth, helping affluent families and business owners reduce taxes and grow wealth.">
+    <meta property="og:title" content="Charlie Dombek | Wealth Architect">
+    <meta property="og:description" content="CPA, MBA with 30+ years helping clients reduce taxation, improve investment performance, and accelerate wealth.">
+    <meta property="og:image" content="charlie-dombek-headshot.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy: #0B1D3A;
+            --navy-light: #132B50;
+            --gold: #C6A355;
+            --gold-light: #D4B76A;
+            --cream: #FAF8F5;
+            --white: #FFFFFF;
+            --gray-100: #F5F5F5;
+            --gray-200: #E8E8E8;
+            --gray-400: #9CA3AF;
+            --gray-600: #6B7280;
+            --gray-800: #1F2937;
+            --text: #2D2D2D;
+            --radius: 12px;
+            --shadow: 0 4px 24px rgba(11, 29, 58, 0.08);
+            --shadow-lg: 0 12px 48px rgba(11, 29, 58, 0.12);
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ─── NAV ─── */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(11,29,58,0.06);
+            transition: var(--transition);
+        }
+
+        nav.scrolled {
+            padding: 0.7rem 2rem;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            height: 36px;
+            opacity: 0.9;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gray-600);
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--navy);
+        }
+
+        .nav-cta {
+            background: var(--navy) !important;
+            color: var(--white) !important;
+            padding: 0.6rem 1.4rem;
+            border-radius: 8px;
+            font-size: 0.85rem !important;
+            transition: var(--transition);
+        }
+
+        .nav-cta:hover {
+            background: var(--navy-light) !important;
+            transform: translateY(-1px);
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .mobile-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--navy);
+            margin: 6px 0;
+            transition: var(--transition);
+        }
+
+        /* ─── HERO ─── */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 2rem 4rem;
+            background: linear-gradient(165deg, var(--cream) 0%, var(--white) 50%, #f0ede8 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            right: -200px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(198,163,85,0.06) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            width: 100%;
+        }
+
+        .hero-text {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-label {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1.2rem;
+        }
+
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.6rem;
+            font-weight: 600;
+            line-height: 1.15;
+            color: var(--navy);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-text h1 span {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--gray-600);
+            margin-top: 0.8rem;
+            line-height: 1.6;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: var(--gray-600);
+            max-width: 480px;
+            margin-bottom: 2rem;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.9rem 2rem;
+            background: var(--navy);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background: var(--navy-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(11,29,58,0.2);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.9rem 2rem;
+            background: transparent;
+            color: var(--navy);
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border: 1.5px solid var(--gray-200);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--navy);
+            transform: translateY(-2px);
+        }
+
+        .hero-image {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2.5rem;
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .hero-stat {
+            text-align: left;
+        }
+
+        .hero-stat strong {
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--navy);
+            font-weight: 600;
+        }
+
+        .hero-stat small {
+            font-size: 0.8rem;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: 500;
+        }
+
+        /* ─── SECTION DEFAULTS ─── */
+        section {
+            padding: 6rem 2rem;
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.8rem;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            font-size: 1.05rem;
+            color: var(--gray-600);
+            max-width: 580px;
+            margin-bottom: 3rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* ─── ABOUT ─── */
+        .about {
+            background: var(--white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .about-text p {
+            color: var(--gray-600);
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+        }
+
+        .credentials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 1.5rem;
+        }
+
+        .credential-tag {
+            padding: 0.4rem 1rem;
+            background: var(--cream);
+            border-radius: 100px;
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: var(--navy);
+            border: 1px solid rgba(11,29,58,0.06);
+        }
+
+        .about-highlights {
+            display: grid;
+            gap: 1.2rem;
+        }
+
+        .highlight-card {
+            padding: 1.5rem;
+            background: var(--cream);
+            border-radius: var(--radius);
+            border: 1px solid rgba(11,29,58,0.04);
+            transition: var(--transition);
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .highlight-card .icon {
+            font-size: 1.4rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .highlight-card h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 0.3rem;
+        }
+
+        .highlight-card p {
+            font-size: 0.85rem;
+            color: var(--gray-600);
+            line-height: 1.5;
+        }
+
+        /* ─── SERVICES ─── */
+        .services {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .services .section-label {
+            color: var(--gold);
+        }
+
+        .services .section-title {
+            color: var(--white);
+        }
+
+        .services .section-subtitle {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .service-card {
+            padding: 2rem;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: var(--radius);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            background: rgba(255,255,255,0.08);
+            transform: translateY(-4px);
+            border-color: rgba(198,163,85,0.3);
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(198,163,85,0.15);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.6rem;
+            color: var(--white);
+        }
+
+        .service-card p {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.55);
+            line-height: 1.6;
+        }
+
+        /* ─── PHILOSOPHY ─── */
+        .philosophy {
+            background: var(--cream);
+        }
+
+        .philosophy-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .philosophy .section-label,
+        .philosophy .section-title {
+            text-align: center;
+        }
+
+        .philosophy .section-subtitle {
+            margin: 0 auto 3rem;
+            text-align: center;
+        }
+
+        blockquote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--navy);
+            line-height: 1.5;
+            font-style: italic;
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        blockquote::before {
+            content: '"';
+            font-size: 5rem;
+            color: var(--gold);
+            position: absolute;
+            top: -0.5rem;
+            left: -1rem;
+            font-family: 'Playfair Display', serif;
+            line-height: 1;
+            opacity: 0.3;
+        }
+
+        .quote-attr {
+            margin-top: 1rem;
+            font-family: 'Inter', sans-serif;
+            font-style: normal;
+            font-size: 0.9rem;
+            color: var(--gray-400);
+        }
+
+        /* ─── FILM ─── */
+        .film {
+            background: var(--white);
+        }
+
+        .film-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .film-text p {
+            color: var(--gray-600);
+            margin-bottom: 1.2rem;
+        }
+
+        .film-titles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .film-tag {
+            padding: 0.35rem 0.9rem;
+            background: var(--navy);
+            color: var(--white);
+            border-radius: 100px;
+            font-size: 0.78rem;
+            font-weight: 500;
+        }
+
+        .film-number {
+            text-align: center;
+        }
+
+        .film-number strong {
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-size: 6rem;
+            color: var(--navy);
+            line-height: 1;
+        }
+
+        .film-number span {
+            font-size: 1.1rem;
+            color: var(--gray-400);
+            font-weight: 500;
+        }
+
+        /* ─── MEDIA / PRESS ─── */
+        .media {
+            background: var(--gray-100);
+        }
+
+        .media-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3.5rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .media-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--navy);
+            opacity: 0.35;
+            transition: var(--transition);
+        }
+
+        .media-logo:hover {
+            opacity: 0.7;
+        }
+
+        .media .section-label,
+        .media .section-title {
+            text-align: center;
+        }
+
+        .media .section-subtitle {
+            text-align: center;
+            margin: 0 auto 2rem;
+        }
+
+        /* ─── CONTACT ─── */
+        .contact {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .contact-inner {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact .section-label {
+            color: var(--gold);
+            text-align: center;
+        }
+
+        .contact .section-title {
+            color: var(--white);
+            text-align: center;
+        }
+
+        .contact .section-subtitle {
+            color: rgba(255,255,255,0.6);
+            margin: 0 auto 2.5rem;
+            text-align: center;
+        }
+
+        .contact-methods {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-method {
+            text-align: center;
+        }
+
+        .contact-method span {
+            display: block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-method a {
+            color: var(--gold-light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .contact-method a:hover {
+            color: var(--white);
+        }
+
+        .contact .btn-primary {
+            background: var(--gold);
+            color: var(--navy);
+            font-weight: 600;
+            padding: 1rem 2.5rem;
+        }
+
+        .contact .btn-primary:hover {
+            background: var(--gold-light);
+            box-shadow: 0 8px 24px rgba(198,163,85,0.3);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        /* ─── FOOTER ─── */
+        footer {
+            padding: 2rem;
+            background: var(--navy);
+            border-top: 1px solid rgba(255,255,255,0.06);
+            text-align: center;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.3);
+        }
+
+        /* ─── ANIMATIONS ─── */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 900px) {
+            .hero-inner {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.6rem;
+            }
+
+            .hero-text p {
+                margin: 0 auto 2rem;
+            }
+
+            .hero-ctas {
+                justify-content: center;
+            }
+
+            .hero-stats {
+                justify-content: center;
+            }
+
+            .hero-image {
+                max-width: 480px;
+                margin: 0 auto;
+            }
+
+            .about-grid,
+            .film-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            blockquote {
+                font-size: 1.3rem;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 1.5rem 2rem;
+                gap: 1rem;
+                border-bottom: 1px solid var(--gray-200);
+                box-shadow: var(--shadow);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+        }
+
+        @media (max-width: 600px) {
+            section {
+                padding: 4rem 1.2rem;
+            }
+
+            .hero {
+                padding: 7rem 1.2rem 3rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+            }
+
+            .film-number strong {
+                font-size: 4rem;
+            }
+
+            .media-logos {
+                gap: 2rem;
+            }
+
+            .contact-methods {
+                flex-direction: column;
+                gap: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ─── NAVIGATION ─── -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <img src="axium-logo.png" alt="Axium Wealth" class="nav-logo">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#philosophy">Philosophy</a></li>
+                <li><a href="#film">Film</a></li>
+                <li><a href="#contact" class="nav-cta">Schedule a Call</a></li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ─── HERO ─── -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-text">
+                <div class="hero-label">CPA &bull; MBA &bull; Wealth Architect</div>
+                <h1>
+                    Charlie Dombek
+                    <span>Helping affluent families and business owners reduce taxation, improve investment performance, and grow wealth rapidly.</span>
+                </h1>
+                <div class="hero-ctas">
+                    <a href="#contact" class="btn-primary">Schedule a Consultation &rarr;</a>
+                    <a href="#about" class="btn-secondary">Learn More</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <strong>30+</strong>
+                        <small>Years Experience</small>
+                    </div>
+                    <div class="hero-stat">
+                        <strong>$300M+</strong>
+                        <small>Capital Raised</small>
+                    </div>
+                    <div class="hero-stat">
+                        <strong>50+</strong>
+                        <small>Films Produced</small>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="charlie-dombek-headshot.jpg" alt="Charlie Dombek — CPA, MBA, Wealth Architect">
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── ABOUT ─── -->
+    <section class="about" id="about">
+        <div class="container fade-in">
+            <div class="about-grid">
+                <div class="about-text">
+                    <div class="section-label">About</div>
+                    <h2 class="section-title">A Wealth Architect With a Unique Perspective</h2>
+                    <p>Charlie Dombek, CPA, MBA, is a highly regarded financial expert and tax strategist with an international reputation for creating innovative solutions in wealth management. With more than 30 years of experience as a practicing CPA, he has helped clients save significant amounts in taxes while building long-term financial stability.</p>
+                    <p>Charlie began his career at Ernst &amp; Young, one of the Big Four accounting firms. He holds an MBA from the College of William &amp; Mary and a Bachelor of Science in Accounting from Virginia Tech.</p>
+                    <p>He is the founder of Axium Wealth, a tax advisory platform serving affluent families and business owners, as well as a founding partner of Optimal Financial Group, a boutique CPA firm with a national presence.</p>
+                    <div class="credentials">
+                        <span class="credential-tag">Certified Public Accountant</span>
+                        <span class="credential-tag">MBA — William &amp; Mary</span>
+                        <span class="credential-tag">BS Accounting — Virginia Tech</span>
+                        <span class="credential-tag">Ernst &amp; Young Alumnus</span>
+                        <span class="credential-tag">Forbes Contributor</span>
+                    </div>
+                </div>
+                <div class="about-highlights">
+                    <div class="highlight-card">
+                        <div class="icon">&#9878;</div>
+                        <h4>Axium Wealth</h4>
+                        <p>Tax advisory platform specializing in wealth acceleration and tax mitigation for high-net-worth individuals and business owners.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="icon">&#9733;</div>
+                        <h4>Optimal Financial Group</h4>
+                        <p>Boutique CPA firm with a wide-reaching national presence, offering comprehensive tax planning and financial strategy.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="icon">&#128218;</div>
+                        <h4>Dentistry Wealth</h4>
+                        <p>Dedicated financial planning practice serving dental professionals with tailored tax and wealth strategies.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="icon">&#127902;</div>
+                        <h4>Film Producer</h4>
+                        <p>Executive producer of 50+ feature films with major studios, bringing the same strategic mindset to entertainment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── SERVICES ─── -->
+    <section class="services" id="services">
+        <div class="container fade-in">
+            <div class="section-label">Services</div>
+            <h2 class="section-title">Comprehensive Wealth Strategy</h2>
+            <p class="section-subtitle">80% of your ability to grow wealth rapidly depends on how much you pay in taxes and investment performance. We optimize both.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">&#128200;</div>
+                    <h3>Tax Strategy &amp; Mitigation</h3>
+                    <p>Advanced planning techniques to limit income-tax exposure to no more than a 24% incremental rate using GRATs, IDGTs, dynasty trusts, and QSBS exclusions.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">&#127968;</div>
+                    <h3>Real Estate &amp; Alternative Assets</h3>
+                    <p>Strategic diversification into passive real estate, 1031 exchanges, Qualified Opportunity Zone Funds, and alternative asset classes for inflation hedging.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">&#128176;</div>
+                    <h3>Wealth Acceleration</h3>
+                    <p>Comprehensive planning to achieve financial freedom through tax-free environments, municipal bonds, Private Placement Life Insurance, and capital preservation.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">&#127970;</div>
+                    <h3>Estate Planning</h3>
+                    <p>Techniques to eliminate exposure to estate taxation entirely, utilizing charitable remainder trusts, family LLCs, and dynasty trust structures.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">&#128101;</div>
+                    <h3>Business Owner Advisory</h3>
+                    <p>Tailored strategies for entrepreneurs and practice owners, from entity structuring to exit planning and practice sale negotiations.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">&#128203;</div>
+                    <h3>Proactive Tax Planning</h3>
+                    <p>We start planning in October — not year-end — giving you time for proactive strategies that traditional CPAs miss.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── PHILOSOPHY ─── -->
+    <section class="philosophy" id="philosophy">
+        <div class="container fade-in">
+            <div class="philosophy-content">
+                <div class="section-label">Philosophy</div>
+                <h2 class="section-title">Tax Efficiency, Not Evasion</h2>
+                <p class="section-subtitle">A compliance-first approach to minimizing your tax burden while maintaining full transparency and peace of mind.</p>
+                <blockquote>
+                    Could we comfortably explain this to an auditor or in court? That's the test. We reject overly aggressive tax planning and opaque offshore arrangements lacking clear business rationale. Our strategies operate within safe harbor provisions, ensuring sustainability and compliance.
+                    <div class="quote-attr">— Charlie Dombek, CPA, MBA</div>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── FILM ─── -->
+    <section class="film" id="film">
+        <div class="container fade-in">
+            <div class="film-grid">
+                <div class="film-text">
+                    <div class="section-label">Beyond Finance</div>
+                    <h2 class="section-title">Executive Film Producer</h2>
+                    <p>Beyond his financial expertise, Charlie has produced over 50 feature films, bringing the same analytical precision and strategic thinking that defines his wealth management practice to the world of entertainment.</p>
+                    <p>His filmography spans multiple genres with major studio releases, demonstrating a rare ability to operate at the highest levels across completely different industries.</p>
+                    <div class="film-titles">
+                        <span class="film-tag">The Strangers: Chapter 1</span>
+                        <span class="film-tag">The Informer</span>
+                        <span class="film-tag">Escape Plan 2: Hades</span>
+                        <span class="film-tag">Force of Nature</span>
+                        <span class="film-tag">Wire Room</span>
+                        <span class="film-tag">Triple Threat</span>
+                        <span class="film-tag">The Hurricane Heist</span>
+                        <span class="film-tag">Replicas</span>
+                        <span class="film-tag">Speed Kills</span>
+                    </div>
+                </div>
+                <div class="film-number">
+                    <strong>50+</strong>
+                    <span>Feature Films Produced</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── MEDIA ─── -->
+    <section class="media" id="media">
+        <div class="container fade-in">
+            <div class="section-label">As Seen On</div>
+            <h2 class="section-title">Featured In Leading Media</h2>
+            <p class="section-subtitle">Recognized as one of the foremost authorities on domestic and international tax planning.</p>
+            <div class="media-logos">
+                <span class="media-logo">Forbes</span>
+                <span class="media-logo">The Street</span>
+                <span class="media-logo">Dennis Prager</span>
+                <span class="media-logo">Trish Regan</span>
+                <span class="media-logo">MoneyShow</span>
+                <span class="media-logo">Financial Tech Times</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── CONTACT ─── -->
+    <section class="contact" id="contact">
+        <div class="contact-inner fade-in">
+            <div class="section-label">Get Started</div>
+            <h2 class="section-title">Ready to Accelerate Your Wealth?</h2>
+            <p class="section-subtitle">Schedule a complimentary consultation to discover how proactive tax planning and strategic investment diversification can transform your financial future.</p>
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <span>Website</span>
+                    <a href="https://axiumwealth.com" target="_blank">axiumwealth.com</a>
+                </div>
+                <div class="contact-method">
+                    <span>LinkedIn</span>
+                    <a href="https://linkedin.com/company/charles-dombek-company" target="_blank">Charles Dombek & Co.</a>
+                </div>
+                <div class="contact-method">
+                    <span>Instagram</span>
+                    <a href="https://instagram.com/charlesdombekandco" target="_blank">@charlesdombekandco</a>
+                </div>
+            </div>
+            <a href="https://axiumwealth.com" class="btn-primary" target="_blank">Schedule a Consultation &rarr;</a>
+            <div class="social-links">
+                <a href="https://facebook.com/charlesdombekandco" target="_blank" aria-label="Facebook">f</a>
+                <a href="https://instagram.com/charlesdombekandco" target="_blank" aria-label="Instagram">ig</a>
+                <a href="https://linkedin.com/company/charles-dombek-company" target="_blank" aria-label="LinkedIn">in</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── FOOTER ─── -->
+    <footer>
+        <p>&copy; 2026 Charlie Dombek. All rights reserved. &nbsp;|&nbsp; Axium Wealth &nbsp;|&nbsp; Optimal Financial Group</p>
+    </footer>
+
+    <!-- ─── SCRIPTS ─── -->
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 40);
+        });
+
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+
+        // Close mobile menu on link click
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('open'));
+        });
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>

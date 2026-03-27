@@ -5,9 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charlie Dombek — Global Wealth Strategist, CPA, MBA</title>
     <meta name="description" content="Charlie Dombek is a global wealth strategist, CPA, MBA, and executive film producer. Founder of Axium Wealth and Optimal Financial Group.">
+    <meta property="og:title" content="Charlie Dombek — Global Wealth Strategist">
+    <meta property="og:description" content="CPA, MBA, Wealth Architect. Founder of Axium Wealth. 30+ years helping affluent families protect and grow their wealth.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="headshot.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Charlie Dombek — Global Wealth Strategist">
+    <meta name="twitter:description" content="CPA, MBA, Wealth Architect. Founder of Axium Wealth.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%230a0a0a'/%3E%3Ctext x='16' y='23' font-family='serif' font-size='18' font-weight='300' fill='%23c8b273' text-anchor='middle'%3ECD%3C/text%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -31,6 +39,7 @@
             background: var(--black);
             color: var(--white);
             -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
             overflow-x: hidden;
         }
 
@@ -51,6 +60,7 @@
             flex-direction: column;
             justify-content: space-between;
             padding: 2.5rem 2rem;
+            background: linear-gradient(to right, rgba(10,10,10,0.95) 60%, rgba(10,10,10,0));
         }
 
         .logo-mark svg {
@@ -73,10 +83,33 @@
             letter-spacing: 0.2em;
             text-transform: uppercase;
             transition: color 0.3s ease;
+            position: relative;
+            padding-left: 0;
         }
 
-        .nav-links a:hover {
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            left: -1rem;
+            top: 50%;
+            width: 0;
+            height: 1px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
             color: var(--white);
+        }
+
+        .nav-links a.active::before {
+            width: 0.6rem;
+        }
+
+        .nav-links a:focus-visible {
+            outline: 1px solid var(--accent);
+            outline-offset: 4px;
         }
 
         .nav-social {
@@ -94,9 +127,8 @@
             transition: color 0.3s ease;
         }
 
-        .nav-social a:hover {
-            color: var(--accent);
-        }
+        .nav-social a:hover { color: var(--accent); }
+        .nav-social a:focus-visible { outline: 1px solid var(--accent); outline-offset: 4px; }
 
         /* ─── MAIN CONTENT ─── */
         .main {
@@ -121,8 +153,9 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center top;
-            filter: grayscale(100%) contrast(1.1);
+            object-position: center 20%;
+            will-change: transform;
+            transform: scale(1.05);
         }
 
         .hero-overlay {
@@ -130,8 +163,8 @@
             inset: 0;
             z-index: 2;
             background:
-                linear-gradient(to bottom, rgba(10,10,10,0.2) 0%, rgba(10,10,10,0) 30%, rgba(10,10,10,0.6) 75%, rgba(10,10,10,0.95) 100%),
-                linear-gradient(to right, rgba(10,10,10,0.4) 0%, rgba(10,10,10,0) 50%);
+                linear-gradient(to bottom, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0) 30%, rgba(10,10,10,0.5) 65%, rgba(10,10,10,0.95) 100%),
+                linear-gradient(to right, rgba(10,10,10,0.5) 0%, rgba(10,10,10,0) 50%);
         }
 
         .hero-content {
@@ -140,6 +173,13 @@
             left: 3.5rem;
             right: 3.5rem;
             z-index: 3;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: heroFadeIn 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s forwards;
+        }
+
+        @keyframes heroFadeIn {
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .hero-title {
@@ -172,12 +212,20 @@
             font-size: 0.65rem;
             letter-spacing: 0.2em;
             text-transform: uppercase;
+            opacity: 0;
+            animation: heroFadeIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s forwards;
         }
 
         .scroll-line {
             width: 40px;
             height: 1px;
             background: var(--gray);
+            animation: scrollPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes scrollPulse {
+            0%, 100% { opacity: 0.5; width: 30px; }
+            50% { opacity: 1; width: 50px; }
         }
 
         /* ─── INTRO ─── */
@@ -190,7 +238,7 @@
             border-bottom: 1px solid var(--mid);
         }
 
-        .intro-left .label {
+        .label {
             font-size: 0.65rem;
             font-weight: 500;
             letter-spacing: 0.25em;
@@ -226,7 +274,7 @@
 
         /* ─── CREDENTIALS BAR ─── */
         .cred-bar {
-            padding: 3rem 3.5rem;
+            padding: 3.5rem 3.5rem;
             display: flex;
             justify-content: space-between;
             border-bottom: 1px solid var(--mid);
@@ -262,6 +310,7 @@
 
         .portrait-image {
             overflow: hidden;
+            position: relative;
         }
 
         .portrait-image img {
@@ -269,6 +318,11 @@
             height: 100%;
             object-fit: cover;
             object-position: center top;
+            transition: transform 8s ease;
+        }
+
+        .portrait-image:hover img {
+            transform: scale(1.03);
         }
 
         .portrait-text {
@@ -277,15 +331,6 @@
             justify-content: center;
             padding: 5rem;
             background: var(--off-black);
-        }
-
-        .portrait-text .label {
-            font-size: 0.65rem;
-            font-weight: 500;
-            letter-spacing: 0.25em;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 2.5rem;
         }
 
         .portrait-text blockquote {
@@ -304,7 +349,27 @@
             letter-spacing: 0.1em;
         }
 
-        /* ─── WORLDS ─── */
+        /* ─── SPEAKING IMAGE BREAK ─── */
+        .image-break {
+            position: relative;
+            height: 60vh;
+            overflow: hidden;
+        }
+
+        .image-break img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 30%;
+        }
+
+        .image-break-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(10,10,10,0.6) 0%, rgba(10,10,10,0) 30%, rgba(10,10,10,0) 70%, rgba(10,10,10,0.6) 100%);
+        }
+
+        /* ─── WORLDS / EXPERTISE ─── */
         .worlds {
             padding: 8rem 3.5rem;
             border-bottom: 1px solid var(--mid);
@@ -315,15 +380,6 @@
             justify-content: space-between;
             align-items: flex-end;
             margin-bottom: 4rem;
-        }
-
-        .worlds-header .label {
-            font-size: 0.65rem;
-            font-weight: 500;
-            letter-spacing: 0.25em;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 1rem;
         }
 
         .worlds-header h2 {
@@ -387,15 +443,6 @@
             align-items: end;
         }
 
-        .film-header .label {
-            font-size: 0.65rem;
-            font-weight: 500;
-            letter-spacing: 0.25em;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 1rem;
-        }
-
         .film-header h2 {
             font-family: 'Cormorant Garamond', serif;
             font-size: 2.4rem;
@@ -422,12 +469,22 @@
             justify-content: space-between;
             align-items: baseline;
             padding-right: 2rem;
+            transition: padding-left 0.3s ease;
+        }
+
+        .film-item:hover {
+            padding-left: 0.5rem;
         }
 
         .film-item .title {
             font-size: 0.9rem;
             color: var(--silver);
             font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .film-item:hover .title {
+            color: var(--white);
         }
 
         .film-item .year {
@@ -444,12 +501,7 @@
         }
 
         .press .label {
-            font-size: 0.65rem;
-            font-weight: 500;
-            letter-spacing: 0.25em;
-            text-transform: uppercase;
             color: var(--gray);
-            margin-bottom: 3rem;
         }
 
         .press-logos {
@@ -468,6 +520,7 @@
             opacity: 0.2;
             transition: opacity 0.3s ease;
             font-style: italic;
+            user-select: none;
         }
 
         .press-logo:hover {
@@ -478,15 +531,6 @@
         .contact {
             padding: 8rem 3.5rem;
             text-align: center;
-        }
-
-        .contact .label {
-            font-size: 0.65rem;
-            font-weight: 500;
-            letter-spacing: 0.25em;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 2rem;
         }
 
         .contact h2 {
@@ -524,6 +568,11 @@
             color: var(--black);
         }
 
+        .contact-btn:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 4px;
+        }
+
         .contact-links {
             display: flex;
             justify-content: center;
@@ -540,9 +589,8 @@
             transition: color 0.3s ease;
         }
 
-        .contact-links a:hover {
-            color: var(--accent);
-        }
+        .contact-links a:hover { color: var(--accent); }
+        .contact-links a:focus-visible { outline: 1px solid var(--accent); outline-offset: 4px; }
 
         /* ─── FOOTER ─── */
         footer {
@@ -566,14 +614,12 @@
             transition: color 0.3s ease;
         }
 
-        footer a:hover {
-            color: var(--accent);
-        }
+        footer a:hover { color: var(--accent); }
 
         /* ─── ANIMATIONS ─── */
         .reveal {
             opacity: 0;
-            transform: translateY(40px);
+            transform: translateY(30px);
             transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
                         transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
@@ -586,6 +632,8 @@
         .reveal-delay-1 { transition-delay: 0.1s; }
         .reveal-delay-2 { transition-delay: 0.2s; }
         .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+        .reveal-delay-5 { transition-delay: 0.5s; }
 
         /* ─── MOBILE NAV ─── */
         .mobile-header {
@@ -612,7 +660,10 @@
             background: none;
             border: none;
             cursor: pointer;
-            padding: 4px;
+            padding: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
         }
 
         .mobile-menu-btn span {
@@ -620,24 +671,36 @@
             width: 22px;
             height: 1.5px;
             background: var(--white);
-            margin: 5px 0;
             transition: all 0.3s ease;
+            transform-origin: center;
+        }
+
+        .mobile-menu-btn.open span:first-child {
+            transform: rotate(45deg) translate(4.5px, 4.5px);
+        }
+
+        .mobile-menu-btn.open span:last-child {
+            transform: rotate(-45deg) translate(4.5px, -4.5px);
         }
 
         .mobile-menu {
-            display: none;
             position: fixed;
             inset: 0;
             z-index: 199;
             background: var(--black);
+            display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             gap: 2rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
         }
 
         .mobile-menu.open {
-            display: flex;
+            opacity: 1;
+            visibility: visible;
         }
 
         .mobile-menu a {
@@ -647,11 +710,22 @@
             font-size: 2rem;
             font-weight: 300;
             transition: color 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
         }
 
-        .mobile-menu a:hover {
-            color: var(--accent);
+        .mobile-menu.open a {
+            opacity: 1;
+            transform: translateY(0);
+            transition: color 0.3s ease, opacity 0.5s ease, transform 0.5s ease;
         }
+
+        .mobile-menu.open a:nth-child(1) { transition-delay: 0.1s; }
+        .mobile-menu.open a:nth-child(2) { transition-delay: 0.15s; }
+        .mobile-menu.open a:nth-child(3) { transition-delay: 0.2s; }
+        .mobile-menu.open a:nth-child(4) { transition-delay: 0.25s; }
+
+        .mobile-menu a:hover { color: var(--accent); }
 
         /* ─── RESPONSIVE ─── */
         @media (max-width: 1024px) {
@@ -675,6 +749,7 @@
             .contact h2 { font-size: 2.5rem; }
             footer { padding: 2rem; }
             .portrait-text { padding: 3rem; }
+            .image-break { height: 45vh; }
         }
 
         @media (max-width: 768px) {
@@ -702,32 +777,26 @@
             }
 
             .portrait-image { height: 60vh; }
+            .portrait-text { padding: 3rem 1.5rem; }
+            .portrait-text blockquote { font-size: 1.4rem; }
 
-            .portrait-text {
-                padding: 3rem 1.5rem;
-            }
+            .image-break { height: 35vh; }
 
-            .portrait-text blockquote {
-                font-size: 1.4rem;
-            }
+            .worlds { padding: 4rem 1.5rem; }
+            .worlds-grid { grid-template-columns: 1fr; }
+            .worlds-header h2 { font-size: 2.2rem; }
 
-            .worlds-grid {
-                grid-template-columns: 1fr;
-            }
-
+            .film { padding: 4rem 1.5rem; }
             .film-header {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
             }
+            .film-list { grid-template-columns: 1fr; }
 
-            .film-list {
-                grid-template-columns: 1fr;
-            }
+            .press { padding: 3rem 1.5rem; }
+            .press-logos { gap: 2rem; }
 
-            .press-logos {
-                gap: 2rem;
-            }
-
+            .contact { padding: 4rem 1.5rem; }
             .contact h2 { font-size: 2rem; }
             .contact-links { flex-direction: column; gap: 1rem; }
 
@@ -738,23 +807,25 @@
                 padding: 2rem 1.5rem;
             }
         }
+
+        @media (max-width: 480px) {
+            .hero-title { font-size: 2rem; }
+            .hero-content { left: 1.5rem; right: 1.5rem; bottom: 3rem; }
+            .cred-item .num { font-size: 2.2rem; }
+        }
     </style>
 </head>
 <body>
 
     <!-- ─── SIDE NAVIGATION ─── -->
-    <nav class="side-nav">
+    <nav class="side-nav" aria-label="Main navigation">
         <div class="logo-mark">
-            <svg viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- CD Monogram -->
+            <svg viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <text x="6" y="58" font-family="Cormorant Garamond, serif" font-size="68" font-weight="300" fill="white" letter-spacing="-2">CD</text>
-                <!-- Thin divider line -->
                 <line x1="6" y1="68" x2="114" y2="68" stroke="#c8b273" stroke-width="0.5"/>
-                <!-- Globe hint - small circle -->
                 <circle cx="60" cy="88" r="12" stroke="white" stroke-width="0.6" fill="none"/>
                 <ellipse cx="60" cy="88" rx="5" ry="12" stroke="white" stroke-width="0.4" fill="none"/>
                 <line x1="48" y1="88" x2="72" y2="88" stroke="white" stroke-width="0.4"/>
-                <!-- Text below -->
                 <text x="60" y="115" font-family="Inter, sans-serif" font-size="6.5" fill="#999" text-anchor="middle" letter-spacing="3" font-weight="500">CHARLIE DOMBEK</text>
                 <text x="60" y="125" font-family="Inter, sans-serif" font-size="5" fill="#666" text-anchor="middle" letter-spacing="2">GLOBAL WEALTH STRATEGIST</text>
             </svg>
@@ -766,41 +837,41 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="nav-social">
-            <a href="https://linkedin.com/company/charles-dombek-company" target="_blank">LinkedIn</a>
-            <a href="https://instagram.com/charlesdombekandco" target="_blank">Instagram</a>
-            <a href="https://facebook.com/charlesdombekandco" target="_blank">Facebook</a>
+            <a href="https://linkedin.com/company/charles-dombek-company" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://instagram.com/charlesdombekandco" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://facebook.com/charlesdombekandco" target="_blank" rel="noopener noreferrer">Facebook</a>
         </div>
     </nav>
 
     <!-- ─── MOBILE HEADER ─── -->
     <header class="mobile-header">
-        <svg viewBox="0 0 100 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 100 50" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <text x="4" y="36" font-family="Cormorant Garamond, serif" font-size="42" font-weight="300" fill="white" letter-spacing="-1">CD</text>
         </svg>
-        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" aria-expanded="false">
             <span></span>
             <span></span>
         </button>
     </header>
 
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="#about" onclick="closeMobile()">About</a>
-        <a href="#expertise" onclick="closeMobile()">Expertise</a>
-        <a href="#film" onclick="closeMobile()">Film</a>
-        <a href="#contact" onclick="closeMobile()">Contact</a>
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#film">Film</a>
+        <a href="#contact">Contact</a>
     </div>
 
     <!-- ─── MAIN ─── -->
     <main class="main">
 
-        <!-- HERO — London Walking Shot -->
+        <!-- HERO -->
         <section class="hero">
             <div class="hero-image">
-                <img src="london-walking.jpg" alt="Charlie Dombek in London">
+                <img src="article-hero.jpg" alt="Charlie Dombek speaking on stage at the American Dream Event" loading="eager">
             </div>
             <div class="hero-overlay"></div>
             <div class="hero-content">
-                <h1 class="hero-title">Charlie Dombek</h1>
+                <h1 class="hero-title">Charlie<br>Dombek</h1>
                 <p class="hero-subtitle">Global Wealth Strategist &nbsp;&bull;&nbsp; CPA &nbsp;&bull;&nbsp; MBA &nbsp;&bull;&nbsp; Executive Film Producer</p>
             </div>
             <div class="hero-scroll">
@@ -818,26 +889,26 @@
             <div class="intro-right reveal reveal-delay-1">
                 <p>Charlie Dombek is a <strong>CPA, MBA, and internationally recognized wealth strategist</strong> with more than 30 years of experience helping affluent families and business owners protect and grow their wealth.</p>
                 <p>He began his career at <strong>Ernst & Young</strong>, one of the Big Four accounting firms, and holds an MBA from the <strong>College of William & Mary</strong> and a BS in Accounting from <strong>Virginia Tech</strong>.</p>
-                <p>Charlie is the founder of <strong>Axium Wealth</strong>, a tax advisory platform dedicated to wealth acceleration and tax mitigation, and a founding partner of <strong>Optimal Financial Group</strong>, a boutique CPA firm with a national presence. He has raised <strong>$300 million in equity</strong> for real estate projects valued at nearly $1 billion and has overseen a FOREX trading platform managing over $100 million in capital.</p>
+                <p>Charlie is the founder of <strong>Axium Wealth</strong>, a tax advisory platform dedicated to wealth acceleration and tax mitigation, and a founding partner of <strong>Optimal Financial Group</strong>, a boutique CPA firm with a national presence. He has raised over <strong>$100 million in equity</strong> for real estate projects valued at nearly $1 billion.</p>
             </div>
         </section>
 
         <!-- CREDENTIALS BAR -->
         <div class="cred-bar">
             <div class="cred-item reveal">
-                <div class="num">30+</div>
+                <div class="num" data-target="30" data-suffix="+">30+</div>
                 <div class="desc">Years of Experience</div>
             </div>
             <div class="cred-item reveal reveal-delay-1">
-                <div class="num">$300M</div>
+                <div class="num" data-target="100" data-prefix="$" data-suffix="M+">$100M+</div>
                 <div class="desc">Equity Capital Raised</div>
             </div>
             <div class="cred-item reveal reveal-delay-2">
-                <div class="num">$1B</div>
+                <div class="num" data-target="1" data-prefix="$" data-suffix="B">$1B</div>
                 <div class="desc">Real Estate Value</div>
             </div>
             <div class="cred-item reveal reveal-delay-3">
-                <div class="num">50+</div>
+                <div class="num" data-target="50" data-suffix="+">50+</div>
                 <div class="desc">Films Produced</div>
             </div>
         </div>
@@ -845,16 +916,22 @@
         <!-- PORTRAIT + QUOTE -->
         <section class="portrait-section">
             <div class="portrait-image">
-                <img src="headshot.jpg" alt="Charlie Dombek portrait">
+                <img src="headshot.jpg" alt="Charlie Dombek professional portrait" loading="lazy">
             </div>
             <div class="portrait-text">
-                <div class="label">Philosophy</div>
-                <blockquote>
+                <div class="label reveal">Philosophy</div>
+                <blockquote class="reveal reveal-delay-1">
                     "Our overall goal is to eliminate exposure to estate taxation entirely and implement income-tax techniques that limit exposure to no more than a 24 percent incremental rate. Could we comfortably explain this to an auditor or in court? That's the test."
                 </blockquote>
-                <div class="attr">— Charlie Dombek, CPA, MBA</div>
+                <div class="attr reveal reveal-delay-2">— Charlie Dombek, CPA, MBA</div>
             </div>
         </section>
+
+        <!-- SPEAKING IMAGE BREAK -->
+        <div class="image-break">
+            <img src="speaking.jpg" alt="Charlie Dombek speaking to a packed room" loading="lazy">
+            <div class="image-break-overlay"></div>
+        </div>
 
         <!-- EXPERTISE -->
         <section class="worlds" id="expertise">
@@ -935,7 +1012,7 @@
                 <span class="press-logo">Dennis Prager</span>
                 <span class="press-logo">Trish Regan</span>
                 <span class="press-logo">MoneyShow</span>
-                <span class="press-logo">Financial Tech Times</span>
+                <span class="press-logo">Hugh Hewitt</span>
             </div>
         </section>
 
@@ -945,12 +1022,12 @@
                 <div class="label">Connect</div>
                 <h2>Let's have a<br>conversation.</h2>
                 <p>Interested in a wealth acceleration strategy tailored to your situation? Reach out to start the conversation.</p>
-                <a href="https://axiumwealth.com" target="_blank" class="contact-btn">Schedule a Consultation</a>
+                <a href="https://axiumwealth.com" target="_blank" rel="noopener noreferrer" class="contact-btn">Visit Axium Wealth</a>
                 <div class="contact-links">
-                    <a href="https://axiumwealth.com" target="_blank">Axium Wealth</a>
-                    <a href="https://linkedin.com/company/charles-dombek-company" target="_blank">LinkedIn</a>
-                    <a href="https://instagram.com/charlesdombekandco" target="_blank">Instagram</a>
-                    <a href="https://www.imdb.com/name/nm7437903/" target="_blank">IMDb</a>
+                    <a href="https://axiumwealth.com" target="_blank" rel="noopener noreferrer">Axium Wealth</a>
+                    <a href="https://linkedin.com/company/charles-dombek-company" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://instagram.com/charlesdombekandco" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://www.imdb.com/name/nm7437903/" target="_blank" rel="noopener noreferrer">IMDb</a>
                 </div>
             </div>
         </section>
@@ -958,34 +1035,109 @@
         <!-- FOOTER -->
         <footer>
             <p>&copy; 2026 Charlie Dombek. All rights reserved.</p>
-            <a href="https://axiumwealth.com" target="_blank">axiumwealth.com</a>
+            <a href="https://axiumwealth.com" target="_blank" rel="noopener noreferrer">axiumwealth.com</a>
         </footer>
 
     </main>
 
     <script>
-        // Scroll reveal
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('visible');
+        (function() {
+            // Scroll reveal
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.12 });
+
+            document.querySelectorAll('.reveal').forEach(function(el) {
+                observer.observe(el);
             });
-        }, { threshold: 0.12 });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-        // Mobile menu
-        const menuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
-        function closeMobile() { mobileMenu.classList.remove('open'); }
+            // Credential counter animation
+            var counted = false;
+            var credObserver = new IntersectionObserver(function(entries) {
+                if (entries[0].isIntersecting && !counted) {
+                    counted = true;
+                    document.querySelectorAll('.cred-item .num').forEach(function(el) {
+                        var target = parseInt(el.dataset.target);
+                        var prefix = el.dataset.prefix || '';
+                        var suffix = el.dataset.suffix || '';
+                        var duration = 1500;
+                        var start = performance.now();
+                        function tick(now) {
+                            var progress = Math.min((now - start) / duration, 1);
+                            var eased = 1 - Math.pow(1 - progress, 3);
+                            var current = Math.round(target * eased);
+                            el.textContent = prefix + current + suffix;
+                            if (progress < 1) requestAnimationFrame(tick);
+                        }
+                        requestAnimationFrame(tick);
+                    });
+                }
+            }, { threshold: 0.5 });
 
-        // Parallax hero (subtle)
-        const heroImg = document.querySelector('.hero-image img');
-        window.addEventListener('scroll', () => {
-            const y = window.scrollY;
-            if (y < window.innerHeight) {
-                heroImg.style.transform = `translateY(${y * 0.3}px) scale(1.05)`;
-            }
-        });
+            var credBar = document.querySelector('.cred-bar');
+            if (credBar) credObserver.observe(credBar);
+
+            // Mobile menu
+            var menuBtn = document.getElementById('mobileMenuBtn');
+            var mobileMenu = document.getElementById('mobileMenu');
+
+            menuBtn.addEventListener('click', function() {
+                var isOpen = mobileMenu.classList.toggle('open');
+                menuBtn.classList.toggle('open');
+                menuBtn.setAttribute('aria-expanded', isOpen);
+                document.body.style.overflow = isOpen ? 'hidden' : '';
+            });
+
+            mobileMenu.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('open');
+                    menuBtn.classList.remove('open');
+                    menuBtn.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                });
+            });
+
+            // Hero parallax with rAF
+            var heroImg = document.querySelector('.hero-image img');
+            var ticking = false;
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    requestAnimationFrame(function() {
+                        var y = window.scrollY;
+                        if (y < window.innerHeight) {
+                            heroImg.style.transform = 'translateY(' + (y * 0.25) + 'px) scale(1.05)';
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+
+            // Active nav state
+            var sections = document.querySelectorAll('section[id]');
+            var navLinks = document.querySelectorAll('.nav-links a');
+
+            window.addEventListener('scroll', function() {
+                var scrollY = window.scrollY + window.innerHeight / 3;
+                sections.forEach(function(section) {
+                    var top = section.offsetTop;
+                    var height = section.offsetHeight;
+                    var id = section.getAttribute('id');
+                    var link = document.querySelector('.nav-links a[href="#' + id + '"]');
+                    if (link) {
+                        if (scrollY >= top && scrollY < top + height) {
+                            link.classList.add('active');
+                        } else {
+                            link.classList.remove('active');
+                        }
+                    }
+                });
+            });
+        })();
     </script>
 
 </body>
